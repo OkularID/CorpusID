@@ -1,5 +1,37 @@
 // ============Carousel===============
 $(document).ready(function() {
+
+  // About Carousel
+  $('.about-slider-carousel').addClass('owl-carousel owl-theme').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    loop: true,
+    autoplay: true,
+    navText: ["<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
+    responsive:{
+      /*Mobile*/
+      0: {
+        items: 1,
+        dots: true,
+        nav: true
+      },
+      /*Tab*/
+      600: {
+        items: 1,
+        dots: true,
+        nav: true
+      },
+      /*Desktop*/
+      1000: {
+        items: 1,
+        loop: true,
+        autoplay: true,
+        dots: true,
+        nav: true
+      }
+    }
+  })
+
   $('.home-carousel').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 0,
     responsiveClass: true,

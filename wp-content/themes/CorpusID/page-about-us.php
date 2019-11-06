@@ -26,8 +26,26 @@
                     font-size: 20px !important;
                 }
                 .boxc {
-                    top: 55%;
+                    top: 50%;
                 }
+            }
+            .mobile_background {
+                width: 100% !important;
+                height: 100vh !important;
+            }
+            .motifhead-left {
+                z-index: 40;
+                position: absolute;
+                top: 45%;
+                left: 25%;
+                width: 15px !important;
+            }
+            .motifhead-right {
+                z-index: 40;
+                position: absolute;
+                top: 52%;
+                left: 71%;
+                width: 15px !important;
             }
         </style>
         <div class="container-fluid">
@@ -36,8 +54,9 @@
                     <div class="boxc">
                         <h1 class="font-white header-title text-center"><?php the_field('header_title') ?></h1>
                     </div>
-<!--                    <img class="img-fluid d-none d-lg-block" src="--><?php //the_field('header_background') ?><!--"/>-->
-                    <img class="img-fluid d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/header-background-01.png"/>
+                    <img class="img-fluid mobile_background d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/mobile_header.jpg"/>
+                    <img class="img-fluid motifhead-left d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/block-left.png"/>
+                    <img class="img-fluid motifhead-right d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/block-right.png"/>
                 </div>
             </div>
         </div>
@@ -209,10 +228,39 @@
         <style>
             @media screen and (max-width: 846px) {
                 .iconn {
-                    background: linear-gradient(180deg, #000 36%, #fff 30%);
+                    background: linear-gradient(180deg, #000 36%, #fff 30%) !important;
                 }
                 .content3 {
                     line-height: 20px;
+                }
+                .about-slider-carousel.owl-theme .owl-nav{
+                    position: absolute !important;
+                    top: 25% !important;
+                    width: 100%;
+                }
+                .about-slider-carousel.owl-theme .owl-nav button.owl-prev{
+                    margin: unset;
+                    position: absolute;
+                    top: unset;
+                    left: 0;
+                    transform: unset;
+                    font-size: 12px !important;
+                    color: #fff !important;
+                }
+                .about-slider-carousel.owl-theme .owl-nav button.owl-next{
+                    margin: unset;
+                    position: absolute;
+                    top: unset;
+                    right: 0;
+                    transform: unset;
+                    font-size: 12px !important;
+                    color: #fff !important;
+                }
+                .about-slider-carousel.owl-theme .owl-nav button.owl-prev img{
+                    width: 30px;
+                }
+                .about-slider-carousel.owl-theme .owl-nav button.owl-next img{
+                    width: 30px;
                 }
             }
         </style>
@@ -221,15 +269,21 @@
                 <div class="col-12 pt-m-5p pb-m-35p text-center">
                     <div class="container-fluid">
                         <div class="row">
-                            <?php if(have_rows('repeater_section_3')): ?>
-                                <?php while (have_rows('repeater_section_3')): the_row(); ?>
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="<?php the_sub_field('icon');?>" alt="">
-                                        <h2 class="font-white"><?php the_sub_field('icon_title');?></h2>
-                                        <p class="pt-m-20p font-black pl-m-10p pr-m-10p content3"><?php the_sub_field('icon_content');?></p>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
+                            <div class="col-12">
+                                <div class="about-slider-carousel owl-theme">
+                                    <?php if(have_rows('repeater_section_3')): ?>
+                                        <?php while (have_rows('repeater_section_3')): the_row(); ?>
+                                            <div class="item about_slider">
+                                                <div class="col-12">
+                                                    <img class="img-fluid bg-black" src="<?php the_sub_field('icon');?>" alt="">
+                                                    <h2 class="font-white bg-black"><?php the_sub_field('icon_title');?></h2>
+                                                    <p class="font-black pl-m-10p pr-m-10p content3"><?php the_sub_field('icon_content');?></p>
+                                                </div>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -450,190 +504,6 @@
     </div>
 
 </section>
-
-<!--
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-06.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2007</h3>
-                                                <p class="font-white"><b>PT CPM Starts to recognize Capital Market and Bank</b></p><br>
-                                                <div class="font-white">
-                                                    <p>PT CPM starts to recognize Capital Market and Bank, with funding percentage 40% Bank, 60% Capital Market. Demands of helping to manage funds, not consultation, increased greatly</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-05.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2008</h3>
-                                                <p class="font-white"><b>PT CPM as Finance Corporate</b></p><br>
-                                                <div class="font-white">
-                                                    <p>Establishing the presence of PT CPM as a Finance Corporate that offers financial consulting services to companies</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-06.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2009</h3>
-                                                <p class="font-white"><b>PT CPM Starts to recognize Capital Market and Bank</b></p><br>
-                                                <div class="font-white">
-                                                    <p>PT CPM starts to recognize Capital Market and Bank, with funding percentage 40% Bank, 60% Capital Market. Demands of helping to manage funds, not consultation, increased greatly</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-05.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2010</h3>
-                                                <p class="font-white"><b>PT CPM as Finance Corporate</b></p><br>
-                                                <div class="font-white">
-                                                    <p>Establishing the presence of PT CPM as a Finance Corporate that offers financial consulting services to companies</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-06.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2011</h3>
-                                                <p class="font-white"><b>PT CPM Starts to recognize Capital Market and Bank</b></p><br>
-                                                <div class="font-white">
-                                                    <p>PT CPM starts to recognize Capital Market and Bank, with funding percentage 40% Bank, 60% Capital Market. Demands of helping to manage funds, not consultation, increased greatly</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-05.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2012</h3>
-                                                <p class="font-white"><b>PT CPM as Finance Corporate</b></p><br>
-                                                <div class="font-white">
-                                                    <p>Establishing the presence of PT CPM as a Finance Corporate that offers financial consulting services to companies</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-06.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2013</h3>
-                                                <p class="font-white"><b>PT CPM Starts to recognize Capital Market and Bank</b></p><br>
-                                                <div class="font-white">
-                                                    <p>PT CPM starts to recognize Capital Market and Bank, with funding percentage 40% Bank, 60% Capital Market. Demands of helping to manage funds, not consultation, increased greatly</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-05.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2014</h3>
-                                                <p class="font-white"><b>PT CPM as Finance Corporate</b></p><br>
-                                                <div class="font-white">
-                                                    <p>Establishing the presence of PT CPM as a Finance Corporate that offers financial consulting services to companies</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="box">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                            <img src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-journey-06.png" alt="" class="img-fluid w-lg-100p h-lg-100p">
-                                        </div>
-                                        <div class="col-lg-9 pl-lg-0 pr-lg-0">
-                                            <div class="brief">
-                                                <h3 class="font-white">2015</h3>
-                                                <p class="font-white"><b>PT CPM Starts to recognize Capital Market and Bank</b></p><br>
-                                                <div class="font-white">
-                                                    <p>PT CPM starts to recognize Capital Market and Bank, with funding percentage 40% Bank, 60% Capital Market. Demands of helping to manage funds, not consultation, increased greatly</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
--->
 
 <section class="aboutSection4">
 <!--Desktop-->

@@ -40,9 +40,9 @@
             background: url("<?php bloginfo('stylesheet_directory');?>/images/logo.gif") center no-repeat #fff;
         }
     </style>
-    <div class="loadergif">
-
-    </div>
+<!--    <div class="loadergif">-->
+<!---->
+<!--    </div>-->
 </section>
 
 
@@ -53,7 +53,7 @@
             <!-- Navbar Desktop -->
             <div class="col-lg-2">
                 <div class="logo">
-                    <a href="/corpus">
+                    <a href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>">
                         <img class="w-lg-80p" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png">
                     </a>
                 </div>

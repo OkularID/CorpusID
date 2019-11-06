@@ -466,7 +466,7 @@
         <div class="container-fluid home-contact pos-rel pt-m-20p pb-m-20p">
             <div class="row">
                 <div class="boxc w-50p">
-                    <div class="contact-title mb-m-3p">
+                    <div class="contact-title mb-m-3p pl-m-0">
                         <h2><?php the_field('title_section_7',5) ?></h2>
 <!--                        <img class="home-icon-01 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-11.png"/>-->
 <!--                        <img class="home-icon-02 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-12.png"/>-->
