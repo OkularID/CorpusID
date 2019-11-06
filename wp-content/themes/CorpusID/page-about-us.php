@@ -205,7 +205,6 @@
             <div class="row">
                 <div class="col-lg-12 pt-lg-5p pb-lg-10p text-center">
                     <div class="container-fluid">
-
                         <div class="row">
                             <?php if(have_rows('repeater_section_3')): ?>
                                 <?php while (have_rows('repeater_section_3')): the_row(); ?>

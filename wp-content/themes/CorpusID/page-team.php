@@ -27,7 +27,25 @@
                     font-size: 20px !important;
                 }
                 .boxc {
-                    top: 55%;
+                    top: 50%;
+                }
+                .mobile_background {
+                    width: 100% !important;
+                    height: 100vh !important;
+                }
+                .motifhead-left {
+                    z-index: 40;
+                    position: absolute;
+                    top: 45%;
+                    left: 25%;
+                    width: 15px !important;
+                }
+                .motifhead-right {
+                    z-index: 40;
+                    position: absolute;
+                    top: 52%;
+                    left: 71%;
+                    width: 15px !important;
                 }
             }
         </style>
@@ -37,9 +55,9 @@
                     <div class="boxc">
                         <h1 class="font-white header-title text-center"><?php the_field('header_title') ?></h1>
                     </div>
-                    <!--                    <img class="img-fluid d-none d-lg-block" src="--><?php //the_field('header_background') ?><!--"/>-->
-                    <img class="img-fluid d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/header-background-01.png"/>
-                </div>
+                    <img class="img-fluid mobile_background d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/mobile_header.jpg"/>
+                    <img class="img-fluid motifhead-left d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/block-left.png"/>
+                    <img class="img-fluid motifhead-right d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/header/block-right.png"/>                </div>
             </div>
         </div>
     </div>
