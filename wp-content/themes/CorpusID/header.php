@@ -156,12 +156,19 @@
             #mobile-menu ul li a:hover ul {
                 display: block !important;
             }
+            .mobileNav .solid{
+                padding: 1px 0;
+                background: url("<?php bloginfo('stylesheet_directory');?>/images/homepage/wong/mobile_header.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
         }
     </style>
-    <nav class="">
+    <nav class="nav2">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 pt-m-0 pb-m-5p pl-m-0 pr-m-0">
+                <div class="col-12 pt-m-0 pb-m-0 pl-m-0 pr-m-0">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-10">

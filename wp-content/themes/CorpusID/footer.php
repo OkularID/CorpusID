@@ -45,6 +45,11 @@
     <div class="d-lg-none">
         <style>
             @media screen and (max-width: 846px) {
+                .boxc_footer {
+                    position: relative;
+
+
+                }
                 .ToS {
                     font-size: 13px;
                 }
@@ -61,8 +66,8 @@
         </style>
         <div class="container-fluid pt-m-5p pb-m-1p pl-m-7p pr-m-7p bg-black">
             <div class="row">
-                <div class="col-12 pt-m-10p">
-                    <ul class="boxc ToS">
+                <div class="col-12 pl-m-0 pr-m-0">
+                    <ul class="boxc_footer ToS text-center">
                         <?php if(have_rows('footer_menu',530)): ?>
                             <?php while (have_rows('footer_menu',530)): the_row(); ?>
                                 <li><a href="<?php the_sub_field('link');?>"><?php the_sub_field('title');?></a></li>

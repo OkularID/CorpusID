@@ -227,7 +227,7 @@
         <style>
             @media screen and (max-width: 846px) {
                 .iconn {
-                    background: linear-gradient(180deg, #000 36%, #fff 30%) !important;
+                    background: linear-gradient(180deg, #000 53%, #fff 30%) !important;
                 }
                 .content3 {
                     line-height: 20px;

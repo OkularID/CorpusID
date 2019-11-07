@@ -1,3 +1,28 @@
+// Mobile NavBar
+$(document).ready(function() {
+  // Transition effect for navbar
+
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if($(this).scrollTop() > 500) {
+      $('.nav2').addClass('solid');
+      $('.nav2').addClass('nav2.solid li a');
+      $('.nav2').addClass('nav2.solid li span');
+      $('ul.bars').addClass('on-scroll');
+      $('ul.bars-normal').addClass('on-scroll');
+      $(".kkk a img").attr("src", 'http://okular.co.id/Astraproperty/wp-content/themes/Astraproperty/images/logo-color.png');
+    } else {
+      $('.nav2').removeClass('solid');
+      $('.nav2').removeClass('nav2.solid li a');
+      $('.nav2').removeClass('nav2.solid li span');
+      $('ul.bars').removeClass('on-scroll');
+      $('ul.bars-normal').addClass('on-scroll');
+      $(".kkk a img").attr("src", 'http://okular.co.id/Astraproperty/wp-content/themes/Astraproperty/images/logo.png');
+    }
+  });
+});
+
+
 // ============Carousel===============
 $(document).ready(function() {
 
@@ -7,7 +32,7 @@ $(document).ready(function() {
     responsiveClass: true,
     loop: true,
     autoplay: true,
-    navText: ["<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
+    navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
     responsive:{
       /*Mobile*/
       0: {

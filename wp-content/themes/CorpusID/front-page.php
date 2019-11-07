@@ -239,14 +239,20 @@
     <div class="d-block d-lg-none">
         <style>
             @media screen and (max-width: 846px) {
-                .home-discover .boxc .header-title {
+                .home-discover .boxcs .header-title {
                     width: 90%;
                 }
                 .home-discover h1 {
-                    font-size: 20px !important;
+                    font-size: 16px !important;
                 }
-                .home-discover .boxc {
-                    width: 263px;
+                .home-discover .boxcs {
+                    position: absolute !important;
+                    top: 30px !important;
+                    width: 250px;
+                    left: 45px !important;
+                    /*text-align: center !important;*/
+
+
                 }
                 .home-services .services-image {
                     position: relative;
@@ -274,7 +280,7 @@
                     <div class="container-fluid home-discover pos-rel">
                         <div class="row">
                             <div class="col-12 slideanim">
-                                <div class="boxc">
+                                <div class="boxcs text-center">
                                     <a href=""><img class="w-m-13p" src="<?php the_field('play_icon') ?>"/></a>
                                     <div class="header-title mb-m-5p">
                                         <h1 class="font-white"><?php the_field('video_title') ?></h1>
