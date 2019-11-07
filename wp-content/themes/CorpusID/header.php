@@ -8,6 +8,7 @@
 
     <!--===========================-->
     <!--||  github.com/OkularID  ||-->
+    <!--||      aby.js.org       ||-->
     <!--===========================-->
     
     <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet"> 
@@ -53,7 +54,7 @@
             <!-- Navbar Desktop -->
             <div class="col-lg-2">
                 <div class="logo">
-                    <a href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>">
+                    <a href="/staging/">
                         <img class="w-lg-80p" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png">
                     </a>
                 </div>
@@ -144,12 +145,6 @@
             #mobile-menu ul {
                 list-style-type: none;
             }
-            /*#mobile-menu ul a {*/
-            /*    color: #0d84e3 !important;*/
-            /*}*/
-            /*#mobile-menu li a{*/
-            /*    color: grey !important;*/
-            /*}*/
             #mobile-menu ul li ul{
                 display: none;
             }
@@ -166,15 +161,21 @@
     <nav class="">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-10">
-                    <a href="/corpus"><img class="" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png" alt=""></a>
-                </div>
-                <div class="col-2">
-                    <a class="ham-bars">
-                        <div id="toggle">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/style/img/menu.svg" alt="">
+                <div class="col-12 pt-m-0 pb-m-5p pl-m-0 pr-m-0">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-10">
+                                <a href="/staging/"><img class="" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png" alt=""></a>
+                            </div>
+                            <div class="col-2">
+                                <a class="ham-bars">
+                                    <div id="toggle">
+                                        <img src="<?php bloginfo('stylesheet_directory');?>/style/img/menu.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>

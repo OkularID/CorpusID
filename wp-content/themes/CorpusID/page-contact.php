@@ -192,69 +192,6 @@
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
-                        <!-- <div class="item">
-                        <div class="row">
-                            <div class="col-lg-8 pl-lg-0 pr-lg-0">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7826836565673!2d112.74403401487378!3d-7.265554594755625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f96213f394d9%3A0x4efaa81c4cd0f593!2sPT%20Corpus%20Prima%20Mandiri!5e0!3m2!1sid!2sid!4v1571934777605!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                            <div class="col-lg-4 bg-black font-white pt-lg-10p pb-lg-15p pl-lg-5p pr-lg-5p">
-                                <div class="header-title">
-                                    <h1 class="font-white">Graha Corpus <b>Surabaya</b></h1>
-                                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
-                                </div>
-                                <p>Head Office:</p>
-                                <p>Jl. Embong Kenongo No.7-9 Surabaya 60271 - East Java</p>
-                                <p>
-                                    M. +62 31 99015353 <br>
-                                    P. +62 31 99015353 <br>
-                                    F. +62 31 99015353
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-lg-8 pl-lg-0 pr-lg-0">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7826836565673!2d112.74403401487378!3d-7.265554594755625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f96213f394d9%3A0x4efaa81c4cd0f593!2sPT%20Corpus%20Prima%20Mandiri!5e0!3m2!1sid!2sid!4v1571934777605!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                            <div class="col-lg-4 bg-black font-white pt-lg-10p pb-lg-15p pl-lg-5p pr-lg-5p">
-                                <div class="header-title">
-                                    <h1 class="font-white">Graha Corpus <b>Surabaya</b></h1>
-                                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
-                                </div>
-                                <p>Head Office:</p>
-                                <p>Jl. Embong Kenongo No.7-9 Surabaya 60271 - East Java</p>
-                                <p>
-                                    M. +62 31 99015353 <br>
-                                    P. +62 31 99015353 <br>
-                                    F. +62 31 99015353
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-lg-8 pl-lg-0 pr-lg-0">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7826836565673!2d112.74403401487378!3d-7.265554594755625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f96213f394d9%3A0x4efaa81c4cd0f593!2sPT%20Corpus%20Prima%20Mandiri!5e0!3m2!1sid!2sid!4v1571934777605!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
-                            <div class="col-lg-4 bg-black font-white pt-lg-10p pb-lg-15p pl-lg-5p pr-lg-5p">
-                                <div class="header-title">
-                                    <h1 class="font-white">Graha Corpus <b>Surabaya</b></h1>
-                                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
-                                </div>
-                                <p>Head Office:</p>
-                                <p>Jl. Embong Kenongo No.7-9 Surabaya 60271 - East Java</p>
-                                <p>
-                                    M. +62 31 99015353 <br>
-                                    P. +62 31 99015353 <br>
-                                    F. +62 31 99015353
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
                     </div>
                 </div>
 

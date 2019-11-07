@@ -2,29 +2,75 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
     <!-- Home Header -->
-    <div class="container-fluid home-header fadein">
-        <div class="row">
-            <div class="home-carousel owl-theme">
-                <?php if(have_rows('header_background_repeater')): ?>
-                    <?php while (have_rows('header_background_repeater')): the_row(); ?>
-                        <div class="item">
-                            <div class="col-lg-12 p-0">
-                                <div class="boxc">
-                                    <div class="header-title">
-                                        <h1 class="font-white"><?php the_sub_field('header_title');?></h1>
-                                        <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                        <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+<section>
+    <!--Desktop-->
+    <div class="d-none d-lg-block">
+        <div class="container-fluid home-header fadein">
+            <div class="row">
+                <div class="home-carousel owl-theme">
+                    <?php if(have_rows('header_background_repeater')): ?>
+                        <?php while (have_rows('header_background_repeater')): the_row(); ?>
+                            <div class="item">
+                                <div class="col-lg-12 p-0">
+                                    <div class="boxc">
+                                        <div class="header-title">
+                                            <h1 class="font-white"><?php the_sub_field('header_title');?></h1>
+                                            <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                            <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                        </div>
                                     </div>
+                                    <img class="img-fluid d-none d-lg-block" src="<?php the_sub_field('background_image');?>"/>
+                                    <img class="img-fluid d-lg-none" src="<?php the_sub_field('background_image');?>"/>
                                 </div>
-                                <img class="img-fluid d-none d-lg-block" src="<?php the_sub_field('background_image');?>"/>
-                                <img class="img-fluid d-lg-none" src="<?php the_sub_field('background_image');?>"/>
                             </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
+
+    <!--Mobile-->
+    <div class="d-block d-lg-none">
+        <style>
+            @media screen and (max-width: 846px) {
+                .header-title {
+                    font-size: 20px !important;
+                }
+                .mobile_background {
+                    width: 100% !important;
+                    height: 100vh !important;
+                }
+                .boxc {
+                    top: 45%;
+                }
+            }
+        </style>
+        <div class="container-fluid home-header fadein">
+            <div class="row">
+                <div class="home-carousel owl-theme">
+                    <?php if(have_rows('header_background_repeater')): ?>
+                        <?php while (have_rows('header_background_repeater')): the_row(); ?>
+                            <div class="item">
+                                <div class="col-lg-12 p-0">
+                                    <div class="boxc">
+                                        <div class="header-title">
+                                            <h1 class="font-white"><?php the_sub_field('header_title');?></h1>
+                                            <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                            <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                        </div>
+                                    </div>
+                                    <img class="img-fluid d-none d-lg-block" src="<?php the_sub_field('background_image');?>"/>
+                                    <img class="img-fluid d-lg-none mobile_background" src="<?php the_sub_field('background_image');?>"/>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <style>
         .button-gr p {
