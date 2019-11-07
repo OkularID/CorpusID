@@ -42,26 +42,38 @@
                     height: 100vh !important;
                 }
                 .boxc {
-                    top: 45%;
+                    top: 40% !important;
+                    left: 10px !important;
+                    width: 200px !important;
+                    text-align: center !important;
+                }
+                .homepage_images {
+                    z-index: 1550 !important;
+                    position: absolute;
+                    width: 82% !important;
+                    bottom: 2% !important;
+                    left: 10px !important;
                 }
             }
         </style>
         <div class="container-fluid home-header fadein">
             <div class="row">
                 <div class="home-carousel owl-theme">
-                    <?php if(have_rows('header_background_repeater')): ?>
-                        <?php while (have_rows('header_background_repeater')): the_row(); ?>
+                    <?php if(have_rows('header_background_mobile_repeater')): ?>
+                        <?php while (have_rows('header_background_mobile_repeater')): the_row(); ?>
                             <div class="item">
                                 <div class="col-lg-12 p-0">
                                     <div class="boxc">
                                         <div class="header-title">
                                             <h1 class="font-white"><?php the_sub_field('header_title');?></h1>
-                                            <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                            <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                            <img class="home-icon-01 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                            <img class="home-icon-02 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
                                         </div>
                                     </div>
-                                    <img class="img-fluid d-none d-lg-block" src="<?php the_sub_field('background_image');?>"/>
-                                    <img class="img-fluid d-lg-none mobile_background" src="<?php the_sub_field('background_image');?>"/>
+                                    <img class="img-fluid homepage_images d-block d-lg-none" src="<?php the_sub_field('background_image');?>"/>
+                                    <img class="img-fluid d-block d-lg-none mobile_background" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/wong/mobile_header.jpg"/>
+<!--                                    <img class="img-fluid d-none d-lg-block" src="--><?php //the_sub_field('background_image');?><!--"/>-->
+<!--                                    <img class="img-fluid d-lg-none mobile_background" src="--><?php //the_sub_field('background_image');?><!--"/>-->
                                 </div>
                             </div>
                         <?php endwhile; ?>
