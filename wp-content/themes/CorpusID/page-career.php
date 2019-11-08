@@ -174,11 +174,23 @@
                 .content-title {
                     font-size: 22px !important;
                 }
-                /*.content_sec {*/
-                /*    line-height: 20px !important;*/
-                /*}*/
                 .content_sec p{
                     line-height: 20px !important;
+                }
+                .career_images {
+                    position: absolute;
+                    z-index: 1030 !important;
+                    width: 90%;
+                    height: auto;
+                    left: 13px !important
+                }
+                .career_motif {
+                    position: absolute;
+                    z-index: 1020 !important;
+                    top: -15px;
+                    left: -8px;
+                    width: 37%;
+                    height: auto;
                 }
             }
         </style>
@@ -190,6 +202,7 @@
                 <div class="col-12 pos-rel text-center">
                     <img class="investment-image" src="<?php the_field('image_section_2') ?>">
                     <!--Motif-->
+                    <img class="career_motif move-right d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/contact/motif.png"/>
                 </div>
                 <div class="col-12 pt-m-3p">
 <!--                    <h2 class="content-title pl-m-5p font-gray">--><?php //the_field('title_content_section_3') ?><!--</h2>-->

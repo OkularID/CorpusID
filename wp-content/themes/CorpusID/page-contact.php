@@ -63,7 +63,17 @@
             color: #fff !important;
         }
         .mapSection .contact-carousel.owl-theme .owl-nav button.owl-next img{width: 75%}
-        .contact-motif-01{position: absolute;top: 32%;left: 0;width: 50%;}
+        .contactimage {
+            position: absolute;
+            z-index: 11 !important;
+            width: 84%;
+        }
+        .contact-motif-01{
+            z-index: 10 !important;
+            position: absolute;
+            top: 18%;
+            left: 0;
+            width: 50%;}
     </style>
 
 <section class="headerSection">
@@ -145,7 +155,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mb-lg-10p pl-lg-10p pr-lg-0">
-                    <div><?php the_field('content_section_2') ?></div>
+                    <div class="pb-lg-15p"><?php the_field('content_section_2') ?></div>
                     <img class="img-fluid contactimage" src="<?php the_field('image_section_2') ?>">
                     <img class="contact-motif-01 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/contact/motif.png"/>
                 </div>
@@ -207,7 +217,21 @@
                     padding-left: 0 !important;
                     padding-right: 0 !important;
                 }
-                .contactimage {position: relative; z-index: 1030;  width: 90%; height: auto; left: 13px !important}
+                .contactimage {
+                    position: absolute;
+                    z-index: 1030 !important;
+                    width: 90%;
+                    height: auto;
+                    left: 13px !important
+                }
+                .contact_motif {
+                    position: absolute;
+                    z-index: 1020 !important;
+                    top: 84px;
+                    left: -37px;
+                    width: 37%;
+                    height: auto;
+                }
                 .header-title1 {
                     font-size: 20px !important;
                     color: grey !important;
@@ -265,10 +289,10 @@
                         <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-12.png"/>
                     </div>
                 </div>
-                <div class="col-12 mb-m-10p pl-m-5p pr-m-5p">
+                <div class="col-12 mb-m-10p pb-m-45p pl-m-5p pr-m-5p">
                     <div class="content_"><?php the_field('content_section_2') ?></div>
-                    <img class="img-fluid contactimage text-center" src="<?php the_field('image_section_2') ?>">
-<!--                    <img class="contact-motif-01 move-right d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/contact/motif.png"/>-->
+                    <img class="img-fluid pt-m-10p pb-m-10p pl-m-5p pr-m-5p contactimage text-center" src="<?php the_field('image_section_2') ?>">
+                    <img class="contact_motif move-right d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/contact/motif.png"/>
                 </div>
                 <div class="col-12 mb-lg-10p contactform pl-lg-5p pr-lg-5p">
                     <p>Please fill out the form, and we’ll respond to you shortly.</p>
