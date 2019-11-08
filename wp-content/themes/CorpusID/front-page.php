@@ -39,7 +39,7 @@
                 }
                 .mobile_background {
                     width: 100% !important;
-                    height: 100vh !important;
+                    height: 94vh !important;
                 }
                 .boxc {
                     top: 40% !important;
@@ -51,8 +51,12 @@
                     z-index: 1550 !important;
                     position: absolute;
                     width: 82% !important;
-                    bottom: 2% !important;
+                    bottom: 0 !important;
                     left: 10px !important;
+                }
+                .home-icon-02 {
+                    top: 75% !important;
+                    left: 87% !important;
                 }
             }
         </style>
@@ -135,6 +139,20 @@
                 line-height: 22px !important;
                 font-size: 13px !important;
             }
+            .home-icon-01 {
+                width: 12px !important;
+                left: 13px !important;
+            }
+            .home-icon-02 {
+                width: 12px !important;
+            }
+            .home-motif-01 {
+                z-index: 10;
+                position: absolute;
+                top: 6%;
+                right: -5%;
+                width: 19% !important;
+            }
         }
     </style>
     <div class="d-block d-lg-none">
@@ -142,13 +160,15 @@
             <div class="row">
             <div class="col-12">
                 <div class="brief-title mb-lg-3p">
-                    <h2 class="font-white"><?php the_field('section_2_title') ?></h2>
-                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                    <h2 class="font-white pl-m-10p"><?php the_field('section_2_title') ?></h2>
+                    <img class="home-icon-01 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                    <img class="home-icon-02 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
                 </div>
             </div>
-            <div class="col-12 pb-m-10p">
+            <div class="col-12 pt-m-10p pb-m-10p">
                 <img class="img-fluid" src="<?php the_field('image_section_2') ?>"/>
+                <img class="home-motif-01 move-left d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-03.png"/>
+<!--                <img class="home-motif-02 move-right d-block d-lg-none" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-04.png"/>-->
             </div>
             <div class="col-12">
                 <div class="font-white mb-lg-5p"><?php the_field('section_2_text') ?></div>
@@ -525,6 +545,12 @@
                 .home-contact .contact-title h2 {
                     font-size: 18px !important;
                 }
+                .home-motif-09 {
+                    position: absolute;
+                    top: -7%;
+                    right: -67%;
+                    width: 13% !important;
+                }
             }
         </style>
         <div class="container-fluid home-contact pos-rel pt-m-20p pb-m-20p">
@@ -547,7 +573,7 @@
                 </div>
                 <div class="col-12 text-right pl-7p pr-7p">
                     <img class="w-lg-60p" src="<?php the_field('image_section_7',5) ?>"/>
-<!--                    <img class="home-motif-09 move-left d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-15.png"/>-->
+                    <img class="home-motif-09 move-left d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-15.png"/>
                 </div>
             </div>
         </div>

@@ -31,7 +31,7 @@
             }
             .mobile_background {
                 width: 100% !important;
-                height: 100vh !important;
+                height: 94vh !important;
             }
             .motifhead-left {
                 z-index: 40;
@@ -106,8 +106,16 @@
                     width: 90%;
                     height: auto;
                 }
-                .content1 p{
+                .content1 p {
                     line-height: 20px;
+                }
+                .about-motif0 {
+                    z-index: 10;
+                    position: absolute;
+                    top: -8%;
+                    left: 21%;
+                    width: 215px !important;
+                    height: auto;
                 }
             }
         </style>
@@ -119,6 +127,8 @@
                 <div class="col-12 pos-rel">
                     <div class="text-center">
                         <img class="img-fluid about-image1" src="<?php the_field('about_images_section_2') ?>">
+                        <!--Motif-->
+                        <img class="about-motif0 move-left d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/partials-03.png"/>
                     </div>
                     <img class="about-motif0 move-left d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/about/partials/partials-03.png"/>
                 </div>
@@ -198,7 +208,7 @@
     </div>
 </section>
 
-<section class="aboutSection2">
+<section class="aboutSection3">
 <!--Desktop-->
     <div class="d-none d-lg-block">
         <div class="container-fluid pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">

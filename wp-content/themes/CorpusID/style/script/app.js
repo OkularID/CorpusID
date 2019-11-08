@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     // checks if window is scrolled more than 500px, adds/removes solid class
-    if($(this).scrollTop() > 500) {
+    if($(this).scrollTop() > 200) {
       $('.nav2').addClass('solid');
       $('.nav2').addClass('nav2.solid li a');
       $('.nav2').addClass('nav2.solid li span');

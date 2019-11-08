@@ -32,7 +32,7 @@
                 }
                 .mobile_background {
                     width: 100% !important;
-                    height: 100vh !important;
+                    height: 94vh !important;
                 }
                 .motifhead-left {
                     z-index: 40;
@@ -118,11 +118,21 @@
                 .content-title {
                     font-size: 22px !important;
                 }
-                /*.content_sec {*/
-                /*    line-height: 20px !important;*/
-                /*}*/
                 .content_sec p{
                     line-height: 20px !important;
+                }
+                .merger-motif1 {
+                    width: 20% !important;
+                    left: 31% !important;
+                    top: -6% !important;
+                }
+                .merger-motif2 {
+                    z-index: 10;
+                    position: absolute;
+                    top: 29%;
+                    left: 56% !important;
+                    width: 50% !important;
+                    height: auto !important;
                 }
             }
         </style>
@@ -131,9 +141,11 @@
                 <div class="col-12 pb-m-5p pl-m-25p pr-m-25p text-center">
                     <h3 class="header-title1"><?php the_field('title_section_2') ?></h3>
                 </div>
-                <div class="col-12 pos-rel text-center">
+                <div class="col-12 pb-m-20p pos-rel text-center">
                     <img class="img-fluid investment-image" src="<?php the_field('image_section_2') ?>">
                     <!--Motif-->
+                    <img class="merger-motif1 move-left d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/partial-02.png"/>
+                    <img class="merger-motif2 move-left d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/partial-03.png"/>
                 </div>
                 <div class="col-12 pt-m-3p">
                     <h2 class="content-title pl-m-5p font-gray"><?php the_field('title_content_section_2') ?></h2>

@@ -169,7 +169,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 pt-m-0 pb-m-0 pl-m-0 pr-m-0">
-                    <div class="container-fluid">
+                    <div class="container-fluid pb-m-5p">
                         <div class="row">
                             <div class="col-10">
                                 <a href="/staging/"><img class="" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png" alt=""></a>

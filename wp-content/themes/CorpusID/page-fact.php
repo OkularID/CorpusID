@@ -98,7 +98,7 @@
                 }
                 .mobile_background {
                     width: 100% !important;
-                    height: 100vh !important;
+                    height: 94vh !important;
                 }
                 .motifhead-left {
                     z-index: 40;
