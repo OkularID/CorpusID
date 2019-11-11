@@ -30,6 +30,9 @@
 
 <section>
     <style>
+        #navbarcorpus{position: fixed;}
+        .shownnav{display: block !important;}
+        .hiddennav{display: none !important;}
         .loadergif{
             transition: all .3s;
             position: fixed;
@@ -48,7 +51,7 @@
 
 
 <!-- Navigation -->
-<nav class="nav-corpus d-none d-lg-block">
+<nav id="navbarcorpus" class="nav-corpus d-none d-lg-block">
     <div class="container-fluid p-0">
         <div class="row">
             <!-- Navbar Desktop -->

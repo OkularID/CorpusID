@@ -27,6 +27,9 @@
 
 <section>
     <style>
+        #navbarcorpus{position: fixed;}
+        .shownnav{display: block !important;}
+        .hiddennav{display: none !important;}
         .loadergif{
             transition: all .3s;
             position: fixed;
