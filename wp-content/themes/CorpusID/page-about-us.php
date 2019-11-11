@@ -381,14 +381,14 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-lg-3 pl-lg-0 pr-lg-0">
-                                                        <img src="<?php the_sub_field('images');?>" alt="" class="img-fluid w-lg-100p h-lg-100p">
+                                                        <img src="<?php the_sub_field('background');?>" alt="" class="img-fluid w-lg-100p h-lg-100p">
                                                     </div>
                                                     <div class="col-lg-9 pl-lg-0 pr-lg-0">
                                                         <div class="brief">
                                                             <h3 class="font-white"><?php the_sub_field('year');?></h3>
                                                             <p class="font-white"><b><?php the_sub_field('title');?></b></p><br>
                                                             <div class="font-white">
-                                                                <p><?php the_sub_field('content');?></p>
+                                                                <p><?php the_sub_field('text');?></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -562,7 +562,7 @@
                 /*width: 50% !important;*/
                 /*height: auto !important;*/
             }
-            .team-motif9{z-index: 10;position: absolute;top: 59%; left: 58%;width: auto !important;}
+            .team-motif9{z-index: 10;position: absolute;top: 31%; left: 53%;width: auto !important;}
             .team-motif10{z-index: 10;position: absolute;top: 134%; left: 0;width: 34% !important;}
         </style>
         <div class="container-fluid pt-lg-5p pb-lg-10p">

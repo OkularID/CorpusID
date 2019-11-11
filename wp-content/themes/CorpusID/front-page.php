@@ -391,7 +391,9 @@
                 <div class="sec1-image-animbox show-on-scroll">
                     <div class="sec1-image-animfadeup">
                         <div class="homeheader-box">
-                            <img class="image" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/image.png"/>
+                            <img class="image" src="<?php the_field('head_img_1') ?>
+
+"/>
                         </div>
                     </div>
                 </div>
@@ -399,7 +401,7 @@
                     <div class="sec1-text-animfadeup">
                         <div class="homeheader-title">
                             <div class="header-title">
-                                <h1 class="font-white"><b>The answers</b> for your financial solution</h1>
+                                <h1 class="font-white"><?php the_field('header_title_1') ?></h1>
                                 <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
                                 <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
                             </div>
@@ -416,7 +418,7 @@
                 <div class="sec2-image-animbox show-on-scroll">
                     <div class="sec2-image-animfadeup">
                         <div class="homeheader-box">
-                            <img class="image" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/image-02.png"/>
+                            <img class="image" src="<?php the_field('head_img_2') ?>"/>
                         </div>
                     </div>
                 </div>
@@ -424,7 +426,7 @@
                     <div class="sec2-text-animfadeup">
                         <div class="homeheader-title">
                             <div class="header-title">
-                                <h1 class="font-white"><b>Supporting Indonesia’s</b> Financial &amp; Economic Market</h1>
+                                <h1 class="font-white"><?php the_field('head_title_2') ?></h1>
                                 <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
                                 <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
                             </div>
@@ -438,7 +440,7 @@
                 <div class="sec3-image-animbox show-on-scroll">
                     <div class="sec3-image-animfadeup">
                         <div class="homeheader-box">
-                            <img class="image" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/image-03.png"/>
+                            <img class="image" src="<?php the_field('head_img_3') ?>"/>
                         </div>
                     </div>
                 </div>
@@ -446,7 +448,7 @@
                     <div class="sec3-text-animfadeup">
                         <div class="homeheader-title">
                             <div class="header-title">
-                                <h1 class="font-white">Your Goal is <b>Our<br>Purpose</b></h1>
+                                <h1 class="font-white"><?php the_field('head_title_3') ?></h1>
                                 <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
                                 <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
                             </div>
@@ -458,33 +460,6 @@
         </div>
     </div>
 
-
-
-<!--    <div class="d-none d-lg-block">-->
-<!--        <div class="container-fluid home-header fadein">-->
-<!--            <div class="row">-->
-<!--                <div class="home-carousel owl-theme">-->
-<!--                    --><?php //if(have_rows('header_background_repeater')): ?>
-<!--                        --><?php //while (have_rows('header_background_repeater')): the_row(); ?>
-<!--                            <div class="item">-->
-<!--                                <div class="col-lg-12 p-0">-->
-<!--                                    <div class="boxc">-->
-<!--                                        <div class="header-title">-->
-<!--                                            <h1 class="font-white">--><?php //the_sub_field('header_title');?><!--</h1>-->
-<!--                                            <img class="home-icon-01 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon.png"/>-->
-<!--                                            <img class="home-icon-02 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-02.png"/>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <img class="img-fluid d-none d-lg-block" src="--><?php //the_sub_field('background_image');?><!--"/>-->
-<!--                                    <img class="img-fluid d-lg-none" src="--><?php //the_sub_field('background_image');?><!--"/>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        --><?php //endwhile; ?>
-<!--                    --><?php //endif; ?>
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
     <!--Mobile-->
     <div class="d-block d-lg-none">
@@ -510,27 +485,36 @@
                     bottom: 0 !important;
                     left: 10px !important;
                 }
-                .home-icon-02 {
-                    top: 75% !important;
-                    left: 87% !important;
+                .home_icon_mobile {
+                    position: absolute;
+
+                    top: -7% !important;
+                    width: 12px !important;
+                    left: -1% !important;
+                }
+                .home_icon_mobile_2 {
+                    position: absolute;
+                    top: 90% !important;
+                    width: 12px !important;
+                    left: 92% !important;
                 }
             }
         </style>
         <div class="container-fluid home-header fadein">
             <div class="row">
                 <div class="home-carousel owl-theme">
-                    <?php if(have_rows('header_background_mobile_repeater')): ?>
-                        <?php while (have_rows('header_background_mobile_repeater')): the_row(); ?>
+                    <?php if(have_rows('header_repeater')): ?>
+                        <?php while (have_rows('header_repeater')): the_row(); ?>
                             <div class="item">
                                 <div class="col-lg-12 p-0">
                                     <div class="boxc">
                                         <div class="header-title">
-                                            <h1 class="font-white"><?php the_sub_field('header_title');?></h1>
-                                            <img class="home-icon-01 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                            <img class="home-icon-02 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                            <h1 class="font-white"><?php the_sub_field('title');?></h1>
+                                            <img class="home_icon_mobile d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                            <img class="home_icon_mobile_2 d-block d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
                                         </div>
                                     </div>
-                                    <img class="img-fluid homepage_images d-block d-lg-none" src="<?php the_sub_field('background_image');?>"/>
+                                    <img class="img-fluid homepage_images d-block d-lg-none" src="<?php the_sub_field('img');?>"/>
                                     <img class="img-fluid d-block d-lg-none mobile_background" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/wong/mobile_header.jpg"/>
 <!--                                    <img class="img-fluid d-none d-lg-block" src="--><?php //the_sub_field('background_image');?><!--"/>-->
 <!--                                    <img class="img-fluid d-lg-none mobile_background" src="--><?php //the_sub_field('background_image');?><!--"/>-->
@@ -547,6 +531,13 @@
     <style>
         .button-gr p {
             top: -2px !important;
+        }
+        .home-motif-01 {
+            z-index: 10;
+            position: absolute;
+            top: 18%;
+            right: -20%;
+            width: auto !important;
         }
     </style>
 
@@ -697,6 +688,21 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-7 pos-rel">
+                                    <style>
+                                        .home-motif-04 {
+                                            position: absolute;
+                                            top: 88%;
+                                            right: 5%;
+                                            width: 50%;
+                                        }
+                                        .home-motif-05 {
+                                            z-index: 10;
+                                            position: absolute;
+                                            bottom: -11%;
+                                            right: 18%;
+                                            width: 15% !important;
+                                        }
+                                    </style>
                                     <img class="img-fluid services-image" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-image-03.jpg"/>
                                     <img class="home-motif-04 move-top d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-10.png"/>
                                     <img class="home-motif-05 move-left d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-09.png"/>
@@ -812,6 +818,21 @@
 
 <section class="honeTestimony">
     <!-- Home Testimony -->
+    <style>
+        .home-motif-06 {
+            position: absolute;
+            top: 87%;
+            left: 0;
+            width: 75%;
+        }
+        .home-motif-07 {
+            z-index: 10;
+            position: absolute;
+            bottom: 0;
+            left: 4%;
+            width: 15% !important;
+        }
+    </style>
     <div class="d-none d-lg-block">
         <div class="container-fluid home-testimony pos-rel pt-lg-15p pb-lg-15p">
             <div class="row">
@@ -967,6 +988,13 @@
 
 <section class="contactSection">
     <!-- Home Contact -->
+    <style>
+        .home-motif-09 {
+            position: absolute;
+            top: -6%;
+            right: -44%;
+        }
+    </style>
     <div class="d-none d-lg-block">
         <div class="container-fluid home-contact pos-rel pt-lg-5p pb-lg-10p">
             <div class="row">
