@@ -8,10 +8,12 @@
 
     <!--===========================-->
     <!--||  github.com/OkularID  ||-->
+    <!--||      aby.js.org       ||-->
     <!--===========================-->
 
     <title><?php bloginfo('title');?> | <?php the_title() ?></title>
     <link href="<?php bloginfo('stylesheet_directory');?>/style/css/style.css" rel='stylesheet' type='text/css'>
+    <link href="<?php bloginfo('stylesheet_directory');?>/style/css/extends.css" rel='stylesheet' type='text/css'>
     <link href="<?php bloginfo('stylesheet_directory');?>/style/css/animation.css" rel='stylesheet' type='text/css'>
     <!--Plug in-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/node_modules/animatecss/animate.min.css">

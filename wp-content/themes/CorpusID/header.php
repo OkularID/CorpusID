@@ -10,8 +10,8 @@
     <!--||  github.com/OkularID  ||-->
     <!--||      aby.js.org       ||-->
     <!--===========================-->
-    
-    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
 
     <title><?php bloginfo('title');?> | <?php the_title() ?></title>
     <link href="<?php bloginfo('stylesheet_directory');?>/style/css/style.css" rel='stylesheet' type='text/css'>
@@ -44,9 +44,9 @@
             background: url("<?php bloginfo('stylesheet_directory');?>/images/logo.gif") center no-repeat #fff;
         }
     </style>
-<!--    <div class="loadergif">-->
-<!---->
-<!--    </div>-->
+    <!--    <div class="loadergif">-->
+    <!---->
+    <!--    </div>-->
 </section>
 
 
@@ -71,7 +71,7 @@
             </div>
             <div class="col-lg-1 pl-lg-0">
                 <div class="lang">
-                    <a class="font-white mr-lg-10" href="">ENG</a><span class="mr-lg-10">|</span><a class="font-white" href="">IND</a>
+                    <a class="font-white mr-lg-10" href="/staging/en">EN</a><span class="mr-lg-10">|</span><a class="font-white" href="/staging/id">ID</a>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -139,11 +139,17 @@
                 background: #fff !important;
                 z-index: 10 !important;
             }
+            .logo_mobile {
+
+            }
             .kloset {
-                padding-left: 42px !important;
+
             }
             .kloset_ {
                 width: 30px !important;
+                position: relative;
+                top: -2%;
+                left: 40% !important;
             }
             #mobile-menu ul {
                 list-style-type: none;
@@ -191,9 +197,27 @@
         </div>
     </nav>
     <div class="side-nav">
-        <div class="kloset">
-            <img class="kloset_" src="<?php bloginfo('stylesheet_directory');?>/style/img/close.svg" alt="">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 idk" style="background-color: #2a9bd9">
+                    <img class="logo_mobile" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png" alt="">
+                </div>
+                <div class="col-4 kloset">
+                    <img class="kloset_" src="<?php bloginfo('stylesheet_directory');?>/style/img/close.svg">
+                </div>
+            </div>
         </div>
+
+<!--        <div class="col-8 logo_mobile">-->
+<!--            <a href="/staging/">-->
+<!--                <img class="" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/logo-corpus.png" alt="">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <div class="col-4 kloset">-->
+<!--            <img class="kloset_" src="--><?php //bloginfo('stylesheet_directory');?><!--/style/img/close.svg">-->
+<!--        </div>-->
+
         <div id="mobile-menu" class="side_nav_mobile">
             <style>
                 .side_nav_mobile {

@@ -109,6 +109,7 @@
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/node_modules/owl.carousel/dist/owl.carousel.js"></script>
 
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/style/script/extends.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/style/script/app.js"></script>
 <script src="<?php bloginfo('stylesheet_directory');?>node_modules/animatecss/wow.min.js"></script>
 <!-- Animate CSS -->
