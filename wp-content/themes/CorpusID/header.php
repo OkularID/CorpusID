@@ -140,7 +140,9 @@
                 z-index: 10 !important;
             }
             .logo_mobile {
-
+                width: 60% !important;
+                height: auto;
+                padding: 2px 2px;
             }
             .kloset {
 
@@ -149,7 +151,7 @@
                 width: 30px !important;
                 position: relative;
                 top: -2%;
-                left: 40% !important;
+                left: 60% !important;
             }
             #mobile-menu ul {
                 list-style-type: none;
@@ -200,8 +202,8 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8 idk" style="background-color: #2a9bd9">
-                    <img class="logo_mobile" src="<?php bloginfo('stylesheet_directory');?>/images/logo-corpus.png" alt="">
+                <div class="col-8 idk">
+                    <img class="logo_mobile" src="<?php bloginfo('stylesheet_directory');?>/images/logo_mobile.png" alt="">
                 </div>
                 <div class="col-4 kloset">
                     <img class="kloset_" src="<?php bloginfo('stylesheet_directory');?>/style/img/close.svg">
@@ -209,14 +211,14 @@
             </div>
         </div>
 
-<!--        <div class="col-8 logo_mobile">-->
-<!--            <a href="/staging/">-->
-<!--                <img class="" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/logo-corpus.png" alt="">-->
-<!--            </a>-->
-<!--        </div>-->
-<!--        <div class="col-4 kloset">-->
-<!--            <img class="kloset_" src="--><?php //bloginfo('stylesheet_directory');?><!--/style/img/close.svg">-->
-<!--        </div>-->
+        <!--        <div class="col-8 logo_mobile">-->
+        <!--            <a href="/staging/">-->
+        <!--                <img class="" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/logo-corpus.png" alt="">-->
+        <!--            </a>-->
+        <!--        </div>-->
+        <!--        <div class="col-4 kloset">-->
+        <!--            <img class="kloset_" src="--><?php //bloginfo('stylesheet_directory');?><!--/style/img/close.svg">-->
+        <!--        </div>-->
 
         <div id="mobile-menu" class="side_nav_mobile">
             <style>

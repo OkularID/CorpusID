@@ -30,6 +30,9 @@
 
 <section>
     <style>
+    <style>
+    <style>
+    <style>
         #navbarcorpus{position: fixed;}
         .shownnav{display: block !important;}
         .hiddennav{display: none !important;}
@@ -44,9 +47,9 @@
             background: url("<?php bloginfo('stylesheet_directory');?>/images/logo.gif") center no-repeat #fff;
         }
     </style>
-    <!--    <div class="loadergif">-->
-    <!---->
-    <!--    </div>-->
+        <div class="loadergif">
+
+        </div>
 </section>
 
 

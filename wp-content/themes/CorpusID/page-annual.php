@@ -1,4 +1,4 @@
-<?php get_header(''); ?>
+<?php get_header('page'); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
     <!--shadows-->
