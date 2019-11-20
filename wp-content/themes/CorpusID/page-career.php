@@ -217,125 +217,125 @@
 <!--Position section-->
 <section class="positionSection">
     <!--Desktop-->
-    <div class="d-none d-lg-block">
-        <div class="container-fluid pos-rel pt-lg-10p pb-lg-10p pl-lg-7p pr-lg-7p">
-            <div class="row">
-                <div class="career-title mb-lg-5p slideanim">
-                    <h1 class="font-white"><?php the_field('title_section_3') ?></h1>
-                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
-                </div>
-                <div class="col-lg-12 slideanim">
-                    <div class="container-fluid" style="overflow: unset !important;">
-                        <div class="row">
-                            <div class="career-carousel owl-theme">
-                                <?php if(have_rows('positions')): ?>
-                                    <?php while (have_rows('positions')): the_row(); ?>
-                                        <div class="item">
-                                            <div class="col-lg-12 pt-lg-10 pb-lg-10 pl-lg-2p pr-lg-2p">
-                                                <div class="bg-white pt-lg-15p pb-lg-15p pl-lg-10p pr-lg-10p box-shadow h-lg-100p">
-                                                    <img src="<?php the_sub_field('icon');?>" alt="" class="img-fluid">
-                                                    <div class="mb-lg-20 pt-lg-10p of-lg-h h-lg-100">
-                                                        <h4><?php the_sub_field('title');?></h4>
-                                                    </div>
-                                                    <table>
-                                                        <tr>
-                                                            <td class="pr-lg-25">
-                                                                <a class="button-gr btn-title" href="" data-toggle="modal" data-target="#<?php echo preg_replace('/[^A-Za-z0-9\-]/', '',strtolower(get_sub_field('title'))); ?>" data-dismiss="modal">
-                                                                    <p class="font-white"><?php the_field('button_detail_text'); ?></p>
-                                                                    <img class="w-lg-120 h-lg-50" src="<?php bloginfo('stylesheet_directory');?>/images/button-gr.png">
-                                                                </a>
-                                                            </td>
-                                                            <td>
-                                                                <a href="<?php the_field('button_apply_link'); ?>" class="button-white"><?php the_field('button_apply_text'); ?></a>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="d-none d-lg-block">-->
+<!--        <div class="container-fluid pos-rel pt-lg-10p pb-lg-10p pl-lg-7p pr-lg-7p">-->
+<!--            <div class="row">-->
+<!--                <div class="career-title mb-lg-5p slideanim">-->
+<!--                    <h1 class="font-white">--><?php //the_field('title_section_3') ?><!--</h1>-->
+<!--                    <img class="home-icon-01 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon.png"/>-->
+<!--                    <img class="home-icon-02 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-02.png"/>-->
+<!--                </div>-->
+<!--                <div class="col-lg-12 slideanim">-->
+<!--                    <div class="container-fluid" style="overflow: unset !important;">-->
+<!--                        <div class="row">-->
+<!--                            <div class="career-carousel owl-theme">-->
+<!--                                --><?php //if(have_rows('positions')): ?>
+<!--                                    --><?php //while (have_rows('positions')): the_row(); ?>
+<!--                                        <div class="item">-->
+<!--                                            <div class="col-lg-12 pt-lg-10 pb-lg-10 pl-lg-2p pr-lg-2p">-->
+<!--                                                <div class="bg-white pt-lg-15p pb-lg-15p pl-lg-10p pr-lg-10p box-shadow h-lg-100p">-->
+<!--                                                    <img src="--><?php //the_sub_field('icon');?><!--" alt="" class="img-fluid">-->
+<!--                                                    <div class="mb-lg-20 pt-lg-10p of-lg-h h-lg-100">-->
+<!--                                                        <h4>--><?php //the_sub_field('title');?><!--</h4>-->
+<!--                                                    </div>-->
+<!--                                                    <table>-->
+<!--                                                        <tr>-->
+<!--                                                            <td class="pr-lg-25">-->
+<!--                                                                <a class="button-gr btn-title" href="" data-toggle="modal" data-target="#--><?php //echo preg_replace('/[^A-Za-z0-9\-]/', '',strtolower(get_sub_field('title'))); ?><!--" data-dismiss="modal">-->
+<!--                                                                    <p class="font-white">--><?php //the_field('button_detail_text'); ?><!--</p>-->
+<!--                                                                    <img class="w-lg-120 h-lg-50" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/button-gr.png">-->
+<!--                                                                </a>-->
+<!--                                                            </td>-->
+<!--                                                            <td>-->
+<!--                                                                <a href="--><?php //the_field('button_apply_link'); ?><!--" class="button-white">--><?php //the_field('button_apply_text'); ?><!--</a>-->
+<!--                                                            </td>-->
+<!--                                                        </tr>-->
+<!--                                                    </table>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    --><?php //endwhile; ?>
+<!--                                --><?php //endif; ?>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <!--Mobile-->
-    <div class="d-block d-lg-none">
-        <style>
-            @media screen and (max-width: 846px) {
-                .career_position {
-                    font-size: 23px !important;
-                }
-                .positionSection .career-title {
-                    position: relative;
-                    padding: 0px 28px !important;
-                    width: auto;
-                }
-                .positionSection .career-carousel .btn-title p {
-                    top: 18px;
-                    left: -9px;
-                    transform: translateY(-50%);
-                    width: 102px;
-                    color: #fff !important;
-
-                }
-                .button-white {
-                    font-size: 12px;
-                    padding: 7px 10px !important;
-                }
-            }
-        </style>
-        <div class="container-fluid pos-rel pt-m-10p pb-m-10p pl-m-7p pr-m-7p">
-            <div class="row">
-                <div class="career-title mb-m-5p slideanim">
-                    <h1 class="font-white career_position"><?php the_field('title_section_3') ?></h1>
-                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
-                </div>
-                <div class="col-12 slideanim">
-                    <div class="container-fluid" style="overflow: unset !important;">
-                        <div class="row">
-                            <div class="career-carousel owl-theme">
-                                <?php if(have_rows('positions')): ?>
-                                    <?php while (have_rows('positions')): the_row(); ?>
-                                        <div class="item">
-                                            <div class="col-12 pt-m-10 pb-m-10 pl-m-5p pr-m-5p">
-                                                <div class="bg-white pt-m-15p pb-m-15p pl-m-10p pr-m-10p box-shadow h-m-100p">
-                                                    <img src="<?php the_sub_field('icon');?>" alt="" class="img-fluid">
-                                                    <div class="mb-m-20 pt-m-10p of-m-h h-m-100">
-                                                        <h4><?php the_sub_field('title');?></h4>
-                                                    </div>
-                                                    <div class="col-12 pl-m-0 pr-m-0">
-                                                        <div class="row">
-                                                            <div class="col-6 pl-m-5p pr-m-1p">
-                                                                <a class="button-gr btn-title" href="" data-toggle="modal" data-target="#<?php echo preg_replace('/[^A-Za-z0-9\-]/', '',strtolower(get_sub_field('title'))); ?>" data-dismiss="modal">
-                                                                    <p class="font-white"><?php the_field('button_detail_text'); ?></p>
-                                                                    <img class="w-m-80p h-m-33" src="<?php bloginfo('stylesheet_directory');?>/images/button-gr.png">
-                                                                </a>
-                                                            </div>
-                                                            <div class="col-6 pl-m-1p pr-m-0">
-                                                                <a href="<?php the_field('button_apply_link'); ?>" class="button-white"><?php the_field('button_apply_text'); ?></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="d-block d-lg-none">-->
+<!--        <style>-->
+<!--            @media screen and (max-width: 846px) {-->
+<!--                .career_position {-->
+<!--                    font-size: 23px !important;-->
+<!--                }-->
+<!--                .positionSection .career-title {-->
+<!--                    position: relative;-->
+<!--                    padding: 0px 28px !important;-->
+<!--                    width: auto;-->
+<!--                }-->
+<!--                .positionSection .career-carousel .btn-title p {-->
+<!--                    top: 18px;-->
+<!--                    left: -9px;-->
+<!--                    transform: translateY(-50%);-->
+<!--                    width: 102px;-->
+<!--                    color: #fff !important;-->
+<!---->
+<!--                }-->
+<!--                .button-white {-->
+<!--                    font-size: 12px;-->
+<!--                    padding: 7px 10px !important;-->
+<!--                }-->
+<!--            }-->
+<!--        </style>-->
+<!--        <div class="container-fluid pos-rel pt-m-10p pb-m-10p pl-m-7p pr-m-7p">-->
+<!--            <div class="row">-->
+<!--                <div class="career-title mb-m-5p slideanim">-->
+<!--                    <h1 class="font-white career_position">--><?php //the_field('title_section_3') ?><!--</h1>-->
+<!--                    <img class="home-icon-01 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon.png"/>-->
+<!--                    <img class="home-icon-02 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-02.png"/>-->
+<!--                </div>-->
+<!--                <div class="col-12 slideanim">-->
+<!--                    <div class="container-fluid" style="overflow: unset !important;">-->
+<!--                        <div class="row">-->
+<!--                            <div class="career-carousel owl-theme">-->
+<!--                                --><?php //if(have_rows('positions')): ?>
+<!--                                    --><?php //while (have_rows('positions')): the_row(); ?>
+<!--                                        <div class="item">-->
+<!--                                            <div class="col-12 pt-m-10 pb-m-10 pl-m-5p pr-m-5p">-->
+<!--                                                <div class="bg-white pt-m-15p pb-m-15p pl-m-10p pr-m-10p box-shadow h-m-100p">-->
+<!--                                                    <img src="--><?php //the_sub_field('icon');?><!--" alt="" class="img-fluid">-->
+<!--                                                    <div class="mb-m-20 pt-m-10p of-m-h h-m-100">-->
+<!--                                                        <h4>--><?php //the_sub_field('title');?><!--</h4>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="col-12 pl-m-0 pr-m-0">-->
+<!--                                                        <div class="row">-->
+<!--                                                            <div class="col-6 pl-m-5p pr-m-1p">-->
+<!--                                                                <a class="button-gr btn-title" href="" data-toggle="modal" data-target="#--><?php //echo preg_replace('/[^A-Za-z0-9\-]/', '',strtolower(get_sub_field('title'))); ?><!--" data-dismiss="modal">-->
+<!--                                                                    <p class="font-white">--><?php //the_field('button_detail_text'); ?><!--</p>-->
+<!--                                                                    <img class="w-m-80p h-m-33" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/button-gr.png">-->
+<!--                                                                </a>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="col-6 pl-m-1p pr-m-0">-->
+<!--                                                                <a href="--><?php //the_field('button_apply_link'); ?><!--" class="button-white">--><?php //the_field('button_apply_text'); ?><!--</a>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!---->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    --><?php //endwhile; ?>
+<!--                                --><?php //endif; ?>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 </section>
 

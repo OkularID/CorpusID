@@ -30,11 +30,30 @@
 
 <section>
     <style>
-    <style>
-    <style>
-    <style>
+        #navbarcorpus{position: fixed;}
         .shownnav{display: block !important;}
         .hiddennav{display: none !important;}
+        .nav-corpus2 {
+            z-index: 1100;
+            padding: 17px 29px;
+            width: 100%;
+        }
+        .nav-corpus2.solid{
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 5px 29px;
+        }
+        .nav-corpus2.solid.col-lg-7 {
+            padding-top: -7px !important;
+        }
+        .nav-corpus2.solid .page ul li ul {
+            background-color: rgba(0, 0, 0, 0.50);
+        }
+        .nav-corpus2.solid .page ul li ul li {
+            padding: 1px 2px !important;
+            margin: 10px !important;
+        }
+
+
         .loadergif{
             transition: all .3s;
             position: fixed;
@@ -46,14 +65,14 @@
             background: url("<?php bloginfo('stylesheet_directory');?>/images/logo.gif") center no-repeat #fff;
         }
     </style>
-        <div class="loadergif">
+    <div class="loadergif">
 
-        </div>
+    </div>
 </section>
 
 
 <!-- Navigation -->
-<nav id="navbarcorpus" class="nav-corpus d-none d-lg-block">
+<nav id="navbarcorpus" class="nav-corpus2 d-none d-lg-block">
     <div class="container-fluid p-0">
         <div class="row">
             <!-- Navbar Desktop -->
@@ -64,19 +83,19 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 pt-lg-1p">
                 <div class="page">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'my-custom-menu',
                     )); ?>
                 </div>
             </div>
-            <div class="col-lg-1 pl-lg-0">
+            <div class="col-lg-1 pt-lg-1p pl-lg-0">
                 <div class="lang">
                     <a class="font-white mr-lg-10" href="/staging/en">EN</a><span class="mr-lg-10">|</span><a class="font-white" href="/staging/id">ID</a>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 pt-lg-1p">
                 <div class="wa">
                     <img src="<?php bloginfo('stylesheet_directory');?>/images/logo-whatsapp.png"><a class="font-white" href="https://api.whatsapp.com/send?phone=<?php the_field('whatsapp_phone',530) ?>" target="_blank"><?php the_field('whatsapp_title',530) ?></a>
                 </div>
@@ -245,3 +264,16 @@
 
     </div>
 </section>
+
+
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.nav-corpus2').addClass('solid');
+            } else {
+                $('.nav-corpus2').removeClass('solid');
+            }
+        });
+    });
+</script>

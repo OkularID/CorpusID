@@ -1,7 +1,16 @@
-// Mobile NavBar
+// Transition NavBar Desktop
 $(document).ready(function() {
-  // Transition effect for navbar
-
+// Transition effect for navbar
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if($(this).scrollTop() > 70) {
+      $('.nav-corpus').addClass('solid');
+      $(".nav-arandra img").attr("src", 'images/logo-arandra-color.png');
+    } else {
+      $('.nav-corpus').removeClass('solid');
+      $(".nav-arandra img").attr("src", 'images/logo-arandra.png');
+    }
+  });
   $(window).scroll(function() {
     // checks if window is scrolled more than 500px, adds/removes solid class
     if($(this).scrollTop() > 200) {
@@ -96,7 +105,7 @@ $(document).ready(function() {
       },
       1000: {
         items: 1,
-        navText: ["<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
+        navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
         loop: true,
         dots: true,
         nav: true
@@ -119,7 +128,7 @@ $(document).ready(function() {
       },
       1000: {
         items: 2,
-        navText: ["<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
+        navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
         loop: true,
         dots: true,
         nav: true
@@ -192,7 +201,7 @@ $(document).ready(function() {
     // touchDrag  : false,
     // mouseDrag  : true,
     responsiveRefreshRate : 200,
-    navText: ["<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/about/partials/arrow-07.png'>","<img src='http://localhost/corpus/wp-content/themes/CorpusID/images/about/partials/arrow-06.png'>"],
+    navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-07.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-06.png'>"],
   }).on('changed.owl.carousel', syncPosition);
   sync2
       .on('initialized.owl.carousel', function () {
@@ -243,7 +252,6 @@ $(document).ready(function() {
     sync1.data('owl.carousel').to(number, 300, true);
   });
 });
-
 
 
 // ============Animation===============
@@ -313,6 +321,7 @@ $(document).ready(function() {
     $(".sidenav").addClass("slideOut");
   })
 })
+
 // Tab Click & Hover
 $(document).ready(function() {
   $('.nav-tab').click(function() {
@@ -331,6 +340,7 @@ $(document).ready(function() {
       $(this).find('.icon').removeClass('active');
   });
 });
+
 //Dropdown
 $(document).ready(function() {
   document.querySelectorAll(".dropmulti-select").forEach((el)=> {
@@ -449,19 +459,28 @@ $(document).ready(function() {
     );
   }
 })
+
+
+// Expand & Minimize navbar when scrolling down
 $(document).ready(function(){
   $(window).scroll(function() {
     if ($(this).scrollTop() > 2000) {
-      $('#navbarcorpus').fadeOut();
-      $('#navbarcorpus').addClass('hiddennav');
-      $('#navbarcorpus').removeClass('shownav');
+
+      // $('#navbarcorpus').fadeOut();
+      // $('#navbarcorpus').addClass('hiddennav');
+      // $('#navbarcorpus').removeClass('shownav');
+
       $('#homemotif-1').fadeOut();
       $('#homemotif-2').fadeOut();
       $('#homemotif-3').fadeOut();
+      $('.nav-corpus').addClass('solid');
     } else {
-      $('#navbarcorpus').fadeIn();
-      $('#navbarcorpus').removeClass('hiddennav');
-      $('#navbarcorpus').addClass('shownav');
+
+      // $('#navbarcorpus').fadeIn();
+      // $('#navbarcorpus').removeClass('hiddennav');
+      // $('#navbarcorpus').addClass('shownav');
+      $('.nav-corpus').removeClass('solid');
+
       $('#homemotif-1').fadeIn();
       $('#homemotif-2').fadeIn();
       $('#homemotif-3').fadeIn();

@@ -33,6 +33,27 @@
         #navbarcorpus{position: fixed;}
         .shownnav{display: block !important;}
         .hiddennav{display: none !important;}
+        .nav-corpus {
+            z-index: 1100;
+            padding: 17px 29px;
+            width: 100%;
+        }
+        .nav-corpus.solid{
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 5px 29px;
+        }
+        .nav-corpus.solid.col-lg-7 {
+            padding-top: -7px !important;
+        }
+        .nav-corpus.solid .page ul li ul {
+            background-color: rgba(0, 0, 0, 0.50);
+        }
+        .nav-corpus.solid .page ul li ul li {
+            padding: 1px 2px !important;
+            margin: 10px !important;
+        }
+
+
         .loadergif{
             transition: all .3s;
             position: fixed;
@@ -44,9 +65,9 @@
             background: url("<?php bloginfo('stylesheet_directory');?>/images/logo.gif") center no-repeat #fff;
         }
     </style>
-    <!--    <div class="loadergif">-->
-    <!---->
-    <!--    </div>-->
+        <div class="loadergif">
+
+        </div>
 </section>
 
 

@@ -28,3 +28,30 @@ $(function() {
         $(target).show();
     });
 });
+
+
+$(document).ready(function(){
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+
+            // $('#navbarcorpus').fadeOut();
+            // $('#navbarcorpus').addClass('hiddennav');
+            // $('#navbarcorpus').removeClass('shownav');
+
+            $('#homemotif-1').fadeOut();
+            $('#homemotif-2').fadeOut();
+            $('#homemotif-3').fadeOut();
+            $('.nav-corpus2').addClass('solid');
+        } else {
+
+            // $('#navbarcorpus').fadeIn();
+            // $('#navbarcorpus').removeClass('hiddennav');
+            // $('#navbarcorpus').addClass('shownav');
+            $('.nav-corpus2').removeClass('solid');
+
+            $('#homemotif-1').fadeIn();
+            $('#homemotif-2').fadeIn();
+            $('#homemotif-3').fadeIn();
+        }
+    });
+});

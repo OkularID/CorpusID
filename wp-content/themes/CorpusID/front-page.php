@@ -816,7 +816,7 @@
 </section>
 
 
-<section class="honeTestimony">
+<section class="homeTestimony">
     <!-- Home Testimony -->
     <style>
         .home-motif-06 {
@@ -1029,6 +1029,9 @@
                 .home-contact .contact-title h2 {
                     font-size: 18px !important;
                 }
+                .want_ {
+                    padding-right: 53% !important;
+                }
                 .home-motif-09 {
                     position: absolute;
                     top: -7%;
@@ -1041,7 +1044,7 @@
             <div class="row">
                 <div class="boxc w-50p">
                     <div class="contact-title mb-m-3p pl-m-0">
-                        <h2><?php the_field('title_section_7',5) ?></h2>
+                        <h2 class="want_"><?php the_field('title_section_7',5) ?></h2>
 <!--                        <img class="home-icon-01 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-11.png"/>-->
 <!--                        <img class="home-icon-02 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/homepage/home-icon-12.png"/>-->
                     </div>
