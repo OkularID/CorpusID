@@ -160,22 +160,25 @@
                     <img class="contact-motif-01 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/contact/motif.png"/>
                 </div>
                 <div class="col-lg-6 mb-lg-10p contactform pl-lg-5p pr-lg-10p">
-                    <form action="">
-                        <label>Name</label>
-                        <input class="mb-lg-10" type="text">
-                        <label>Email</label>
-                        <input class="mb-lg-10" type="email">
-                        <label>Phone</label>
-                        <input class="mb-lg-10" type="number">
-                        <label>Company</label>
-                        <input class="mb-lg-10" type="text">
-                        <label>Message</label>
-                        <textarea class="mb-lg-10" rows="5"></textarea>
-                        <button type="button" class="button-gr">
-                            <p class="font-white">SUBMIT</p>
-                            <img class="w-lg-120 h-lg-50" src="<?php bloginfo('stylesheet_directory');?>/images/button-gr.png">
-                        </button>
-                    </form>
+
+                    <?php echo do_shortcode('[contact-form-7 id="725" title="Form Contact"]'); ?>
+
+<!--                    <form action="">-->
+<!--                        <label>Name</label>-->
+<!--                        <input class="mb-lg-10" type="text">-->
+<!--                        <label>Email</label>-->
+<!--                        <input class="mb-lg-10" type="email">-->
+<!--                        <label>Phone</label>-->
+<!--                        <input class="mb-lg-10" type="number">-->
+<!--                        <label>Company</label>-->
+<!--                        <input class="mb-lg-10" type="text">-->
+<!--                        <label>Message</label>-->
+<!--                        <textarea class="mb-lg-10" rows="5"></textarea>-->
+<!--                        <button type="button" class="button-gr">-->
+<!--                            <p class="font-white">SUBMIT</p>-->
+<!--                            <img class="w-lg-120 h-lg-50" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/button-gr.png">-->
+<!--                        </button>-->
+<!--                    </form>-->
                 </div>
 
                 <!-- Maps -->

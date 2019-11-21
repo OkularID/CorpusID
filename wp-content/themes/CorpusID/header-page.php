@@ -73,7 +73,7 @@
 
 <!-- Navigation -->
 <nav id="navbarcorpus" class="nav-corpus2 d-none d-lg-block">
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" style="overflow: unset !important;">
         <div class="row">
             <!-- Navbar Desktop -->
             <div class="col-lg-2">
@@ -83,19 +83,19 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-7 pt-lg-1p">
+            <div class="col-lg-7">
                 <div class="page">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'my-custom-menu',
                     )); ?>
                 </div>
             </div>
-            <div class="col-lg-1 pt-lg-1p pl-lg-0">
+            <div class="col-lg-1 pl-lg-0">
                 <div class="lang">
                     <a class="font-white mr-lg-10" href="/staging/en">EN</a><span class="mr-lg-10">|</span><a class="font-white" href="/staging/id">ID</a>
                 </div>
             </div>
-            <div class="col-lg-2 pt-lg-1p">
+            <div class="col-lg-2">
                 <div class="wa">
                     <img src="<?php bloginfo('stylesheet_directory');?>/images/logo-whatsapp.png"><a class="font-white" href="https://api.whatsapp.com/send?phone=<?php the_field('whatsapp_phone',530) ?>" target="_blank"><?php the_field('whatsapp_title',530) ?></a>
                 </div>
