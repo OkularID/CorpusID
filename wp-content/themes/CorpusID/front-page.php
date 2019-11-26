@@ -4,459 +4,461 @@
     <!-- Home Header -->
 <section>
     <!--Desktop-->
-    <style type="text/css">
-        /*Content*/
-        .sectionHome .homeheader-box{
-            z-index: 20;
-            display: block;
-            position: fixed;
-            bottom: 0;
-            width: 50%;
-            transition: 50s;
-        }
-        .sectionHome .homeheader-title{
-            display: block;
-            position: fixed;
-            top: 35%;
-            right: 10%;
-            width: 550px;
-            transition: 50s;
-        }
-        .sectionHome .header-title{
-            position:relative;
-            padding: 5%;
-            width: 100%;
-            text-align: center;
-        }
-        .sectionHome .homeheader-icon-01{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: auto !important;
-        }
-        .sectionHome .homeheader-icon-02{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: auto !important;
-        }
-        .sectionHome .homeheader-motif-01{
-            z-index: 0;
-            position: fixed;
-            top: 25%;
-            left: 2%;
-            width: 15% !important;
-        }
-        .sectionHome .homeheader-motif-02{
-            z-index: 30;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 30% !important;
-        }
-        .sectionHome .homeheader-motif-03{
-            z-index: 10;
-            position: fixed;
-            bottom: -5%;
-            right: 10%;
-            width: 18% !important;
-        }
-        .sectionHome{
-            background: url('<?php bloginfo('stylesheet_directory');?>/images/home-slider/background.jpg');
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            background-attachment: fixed !important;
-            width:100%;
-            height: 410vh;
-            overflow: hidden !important;
-        }
-        .sectionHome .item{width: 100%;height: 100vh;}
-        /*End Content*/
-        /*Normal Animation*/
-        .animbox{height:80vh;position:relative}
-        .animbox:after{bottom:0;content:"";left:0;position:absolute;right:0;top:0}
-        .animfadeup{color:#19292e;font-size:120px !important;left:50%;line-height:1;margin:0;position:absolute;text-shadow:0 2px 10px rgba(255,255,255,.5);top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:5em;z-index:10}
-        .animbox{
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .animbox.is-visible{
-            opacity: 1;
-        }
-        .animfadeup {
-            -webkit-transform: translate(-50%, calc(-50% + 1em));
-            transform: translate(-50%, calc(-50% + 1em));
-        }
-        .is-visible .animfadeup {
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-        .animfadeup {
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-        }
-        /*End Normal Animation*/
-        /*Sec-1 Image Animation*/
-        .sec1-image-animbox{
-            position:relative;
-            height: 100vh;
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .sec1-image-animbox:after{
-            bottom:0;
-            content:"";
-            left:0;
-            position:fixed;
-            right:0;
-            top:0;
-        }
-        .sec1-image-animfadeup{
-            z-index:10;
-            position:fixed;
-            margin:0;
-            bottom:0;
-            left:50%;
-            width:5em;
-            color:#19292e;
-            font-size:120px !important;
-            line-height:1;
-            text-shadow:0 2px 10px rgba(255,255,255,.5);
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-            -webkit-transform: translate(-100%, calc(-50% + 1em));
-            transform: translate(-100%, calc(-50% + 1em));
-        }
-        .sec1-image-animbox.is-visible{opacity: 1;}
-        .is-visible .sec1-image-animfadeup{
-            -webkit-transform: translate(-100%, -50%);
-            transform: translate(-100%, -50%);
-        }
-        /*End Sec-1 Image Animation*/
-        /*Sec 1 Text Animation*/
-        .sec1-text-animbox{
-            position:relative;
-            margin-top: -100vh;
-            height: 100vh;
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .sec1-text-animbox:after{
-            bottom:0;
-            content:"";
-            left:0;
-            position:fixed;
-            right:0;
-            top:0;
-        }
-        .sec1-text-animfadeup{
-            z-index:10;
-            position:fixed;
-            margin:0;
-            top:35%;
-            left:70%;
-            width:5em;
-            color:#19292e;
-            font-size:120px !important;
-            line-height:1;
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-            -webkit-transform: translate(80%, calc(-50%));
-            transform: translate(80%, calc(-50%));
-        }
-        .sec1-text-animbox.is-visible{opacity: 1;}
-        .is-visible .sec1-text-animfadeup{
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-        /*End Sec 1 Text Animation*/
-        /*Sec-2 Image Animation*/
-        .sec2-image-animbox{
-            position:relative;
-            margin-top: 50vh;
-            height: 50vh;
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .sec2-image-animbox:after{
-            bottom:0;
-            content:"";
-            left:0;
-            position:fixed;
-            right:0;
-            top:0;
-        }
-        .sec2-image-animfadeup{
-            z-index:10;
-            position:fixed;
-            margin:0;
-            bottom:0;
-            left:50%;
-            width:5em;
-            color:#19292e;
-            font-size:120px !important;
-            line-height:1;
-            text-shadow:0 2px 10px rgba(255,255,255,.5);
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-            -webkit-transform: translate(-100%, calc(-50% + 1em));
-            transform: translate(-100%, calc(-50% + 1em));
-        }
-        .sec2-image-animbox.is-visible{opacity: 1;}
-        .is-visible .sec2-image-animfadeup{
-            -webkit-transform: translate(-100%, -50%);
-            transform: translate(-100%, -50%);
-        }
-        /*End Sec-2 Image Animation*/
-        /*Sec 2 Text Animation*/
-        .sec2-text-animbox{
-            position:relative;
-            margin-top: -50vh;
-            height: 50vh;
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .sec2-text-animbox:after{
-            bottom:0;
-            content:"";
-            left:0;
-            position:fixed;
-            right:0;
-            top:0;
-        }
-        .sec2-text-animfadeup{
-            z-index:10;
-            position:fixed;
-            margin:0;
-            top:30vh;
-            left:75%;
-            width:5em;
-            color:#19292e;
-            font-size:120px !important;
-            line-height:1;
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-            -webkit-transform: translate(80%, calc(-50%));
-            transform: translate(80%, calc(-50%));
-        }
-        .sec2-text-animbox.is-visible{opacity: 1;}
-        .is-visible .sec2-text-animfadeup{
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-        /*End Sec 2 Text Animation*/
-        /*Sec-3 Image Animation*/
-        .sec3-image-animbox{
-            position:relative;
-            margin-top: 80vh;
-            height: 20vh;
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .sec3-image-animbox:after{
-            bottom:0;
-            content:"";
-            left:0;
-            position:fixed;
-            right:0;
-            top:0;
-        }
-        .sec3-image-animfadeup{
-            z-index:10;
-            position:fixed;
-            margin:0;
-            bottom:0;
-            left:45%;
-            width:5em;
-            color:#19292e;
-            font-size:120px !important;
-            line-height:1;
-            text-shadow:0 2px 10px rgba(255,255,255,.5);
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-            -webkit-transform: translate(-100%, calc(-50% + 1em));
-            transform: translate(-100%, calc(-50% + 1em));
-        }
-        .sec3-image-animbox.is-visible{opacity: 1;}
-        .is-visible .sec3-image-animfadeup{
-            -webkit-transform: translate(-100%, -50%);
-            transform: translate(-100%, -50%);
-        }
-        /*End Sec-3 Image Animation*/
-        /*Sec 3 Text Animation*/
-        .sec3-text-animbox{
-            position:relative;
-            margin-top: -20vh;
-            height: 50vh;
-            opacity: 0;
-            transition: opacity .5s .25s ease-out;
-        }
-        .sec3-text-animbox:after{
-            bottom:0;
-            content:"";
-            left:0;
-            position:fixed;
-            right:0;
-            top:0;
-        }
-        .sec3-text-animfadeup{
-            z-index:10;
-            position:fixed;
-            margin:0;
-            top:30vh;
-            left:70%;
-            width:5em;
-            color:#19292e;
-            font-size:120px !important;
-            line-height:1;
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-            transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out;
-            transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-            filter 10s 2s ease-out,
-            -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
-            -webkit-filter 10s 2s ease-out;
-            will-change: transform;
-            -webkit-transform: translate(80%, calc(-50%));
-            transform: translate(80%, calc(-50%));
-        }
-        .sec3-text-animbox.is-visible{opacity: 1;}
-        .is-visible .sec3-text-animfadeup{
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-        /*End Sec 3 Text Animation*/
-    </style>
-    <div class="container-fluid d-none d-lg-block sectionHome pos-rel pl-lg-0 pr-lg-0">
-        <div class="row">
+    <div class="d-none d-lg-block">
+        <style type="text/css">
+            /*Content*/
+            .sectionHome .homeheader-box{
+                z-index: 20;
+                display: block;
+                position: fixed;
+                bottom: 0;
+                width: 50%;
+                transition: 50s;
+            }
+            .sectionHome .homeheader-title{
+                display: block;
+                position: fixed;
+                top: 35%;
+                right: 10%;
+                width: 550px;
+                transition: 50s;
+            }
+            .sectionHome .header-title{
+                position:relative;
+                padding: 5%;
+                width: 100%;
+                text-align: center;
+            }
+            .sectionHome .homeheader-icon-01{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: auto !important;
+            }
+            .sectionHome .homeheader-icon-02{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: auto !important;
+            }
+            .sectionHome .homeheader-motif-01{
+                z-index: 0;
+                position: fixed;
+                top: 25%;
+                left: 2%;
+                width: 15% !important;
+            }
+            .sectionHome .homeheader-motif-02{
+                z-index: 30;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 30% !important;
+            }
+            .sectionHome .homeheader-motif-03{
+                z-index: 10;
+                position: fixed;
+                bottom: -5%;
+                right: 10%;
+                width: 18% !important;
+            }
+            .sectionHome{
+                background: url('<?php bloginfo('stylesheet_directory');?>/images/home-slider/background.jpg');
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                background-position: center !important;
+                background-attachment: fixed !important;
+                width:100%;
+                height: 410vh;
+                overflow: hidden !important;
+            }
+            .sectionHome .item{width: 100%;height: 100vh;}
+            /*End Content*/
+            /*Normal Animation*/
+            .animbox{height:80vh;position:relative}
+            .animbox:after{bottom:0;content:"";left:0;position:absolute;right:0;top:0}
+            .animfadeup{color:#19292e;font-size:120px !important;left:50%;line-height:1;margin:0;position:absolute;text-shadow:0 2px 10px rgba(255,255,255,.5);top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:5em;z-index:10}
+            .animbox{
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .animbox.is-visible{
+                opacity: 1;
+            }
+            .animfadeup {
+                -webkit-transform: translate(-50%, calc(-50% + 1em));
+                transform: translate(-50%, calc(-50% + 1em));
+            }
+            .is-visible .animfadeup {
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .animfadeup {
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+            }
+            /*End Normal Animation*/
+            /*Sec-1 Image Animation*/
+            .sec1-image-animbox{
+                position:relative;
+                height: 100vh;
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .sec1-image-animbox:after{
+                bottom:0;
+                content:"";
+                left:0;
+                position:fixed;
+                right:0;
+                top:0;
+            }
+            .sec1-image-animfadeup{
+                z-index:10;
+                position:fixed;
+                margin:0;
+                bottom:0;
+                left:50%;
+                width:5em;
+                color:#19292e;
+                font-size:120px !important;
+                line-height:1;
+                text-shadow:0 2px 10px rgba(255,255,255,.5);
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+                -webkit-transform: translate(-100%, calc(-50% + 1em));
+                transform: translate(-100%, calc(-50% + 1em));
+            }
+            .sec1-image-animbox.is-visible{opacity: 1;}
+            .is-visible .sec1-image-animfadeup{
+                -webkit-transform: translate(-100%, -50%);
+                transform: translate(-100%, -50%);
+            }
+            /*End Sec-1 Image Animation*/
+            /*Sec 1 Text Animation*/
+            .sec1-text-animbox{
+                position:relative;
+                margin-top: -100vh;
+                height: 100vh;
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .sec1-text-animbox:after{
+                bottom:0;
+                content:"";
+                left:0;
+                position:fixed;
+                right:0;
+                top:0;
+            }
+            .sec1-text-animfadeup{
+                z-index:10;
+                position:fixed;
+                margin:0;
+                top:35%;
+                left:70%;
+                width:5em;
+                color:#19292e;
+                font-size:120px !important;
+                line-height:1;
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+                -webkit-transform: translate(80%, calc(-50%));
+                transform: translate(80%, calc(-50%));
+            }
+            .sec1-text-animbox.is-visible{opacity: 1;}
+            .is-visible .sec1-text-animfadeup{
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            /*End Sec 1 Text Animation*/
+            /*Sec-2 Image Animation*/
+            .sec2-image-animbox{
+                position:relative;
+                margin-top: 50vh;
+                height: 50vh;
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .sec2-image-animbox:after{
+                bottom:0;
+                content:"";
+                left:0;
+                position:fixed;
+                right:0;
+                top:0;
+            }
+            .sec2-image-animfadeup{
+                z-index:10;
+                position:fixed;
+                margin:0;
+                bottom:0;
+                left:50%;
+                width:5em;
+                color:#19292e;
+                font-size:120px !important;
+                line-height:1;
+                text-shadow:0 2px 10px rgba(255,255,255,.5);
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+                -webkit-transform: translate(-100%, calc(-50% + 1em));
+                transform: translate(-100%, calc(-50% + 1em));
+            }
+            .sec2-image-animbox.is-visible{opacity: 1;}
+            .is-visible .sec2-image-animfadeup{
+                -webkit-transform: translate(-100%, -50%);
+                transform: translate(-100%, -50%);
+            }
+            /*End Sec-2 Image Animation*/
+            /*Sec 2 Text Animation*/
+            .sec2-text-animbox{
+                position:relative;
+                margin-top: -50vh;
+                height: 50vh;
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .sec2-text-animbox:after{
+                bottom:0;
+                content:"";
+                left:0;
+                position:fixed;
+                right:0;
+                top:0;
+            }
+            .sec2-text-animfadeup{
+                z-index:10;
+                position:fixed;
+                margin:0;
+                top:30vh;
+                left:75%;
+                width:5em;
+                color:#19292e;
+                font-size:120px !important;
+                line-height:1;
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+                -webkit-transform: translate(80%, calc(-50%));
+                transform: translate(80%, calc(-50%));
+            }
+            .sec2-text-animbox.is-visible{opacity: 1;}
+            .is-visible .sec2-text-animfadeup{
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            /*End Sec 2 Text Animation*/
+            /*Sec-3 Image Animation*/
+            .sec3-image-animbox{
+                position:relative;
+                margin-top: 80vh;
+                height: 20vh;
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .sec3-image-animbox:after{
+                bottom:0;
+                content:"";
+                left:0;
+                position:fixed;
+                right:0;
+                top:0;
+            }
+            .sec3-image-animfadeup{
+                z-index:10;
+                position:fixed;
+                margin:0;
+                bottom:0;
+                left:45%;
+                width:5em;
+                color:#19292e;
+                font-size:120px !important;
+                line-height:1;
+                text-shadow:0 2px 10px rgba(255,255,255,.5);
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+                -webkit-transform: translate(-100%, calc(-50% + 1em));
+                transform: translate(-100%, calc(-50% + 1em));
+            }
+            .sec3-image-animbox.is-visible{opacity: 1;}
+            .is-visible .sec3-image-animfadeup{
+                -webkit-transform: translate(-100%, -50%);
+                transform: translate(-100%, -50%);
+            }
+            /*End Sec-3 Image Animation*/
+            /*Sec 3 Text Animation*/
+            .sec3-text-animbox{
+                position:relative;
+                margin-top: -20vh;
+                height: 50vh;
+                opacity: 0;
+                transition: opacity .5s .25s ease-out;
+            }
+            .sec3-text-animbox:after{
+                bottom:0;
+                content:"";
+                left:0;
+                position:fixed;
+                right:0;
+                top:0;
+            }
+            .sec3-text-animfadeup{
+                z-index:10;
+                position:fixed;
+                margin:0;
+                top:30vh;
+                left:70%;
+                width:5em;
+                color:#19292e;
+                font-size:120px !important;
+                line-height:1;
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                transition: -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out;
+                transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                filter 10s 2s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1),
+                -webkit-filter 10s 2s ease-out;
+                will-change: transform;
+                -webkit-transform: translate(80%, calc(-50%));
+                transform: translate(80%, calc(-50%));
+            }
+            .sec3-text-animbox.is-visible{opacity: 1;}
+            .is-visible .sec3-text-animfadeup{
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            /*End Sec 3 Text Animation*/
+        </style>
+        <div class="container-fluid d-none d-lg-block sectionHome pos-rel pl-lg-0 pr-lg-0">
+            <div class="row">
 
-            <!-- Section 1 -->
-            <div class="col-lg-12 item of-lg-h sec-1">
-                <div class="sec1-image-animbox show-on-scroll">
-                    <div class="sec1-image-animfadeup">
-                        <div class="homeheader-box">
-                            <img class="image" src="<?php the_field('head_img_1') ?>
+                <!-- Section 1 -->
+                <div class="col-lg-12 item of-lg-h sec-1">
+                    <div class="sec1-image-animbox show-on-scroll">
+                        <div class="sec1-image-animfadeup">
+                            <div class="homeheader-box">
+                                <img class="image" src="<?php the_field('head_img_1') ?>
 
 "/>
+                            </div>
                         </div>
                     </div>
+                    <div class="sec1-text-animbox show-on-scroll">
+                        <div class="sec1-text-animfadeup">
+                            <div class="homeheader-title">
+                                <div class="header-title">
+                                    <h1 class="font-white"><?php the_field('header_title_1') ?></h1>
+                                    <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                    <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="homemotif-1"><img id="homemotif" class="homeheader-motif-01 move-left d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/motif.png"/></div>
+                    <div id="homemotif-2"><img class="homeheader-motif-02 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/motif-02.png"/></div>
+                    <div id="homemotif-3"><img id="homemotif" class="homeheader-motif-03 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/motif.png"/></div>
                 </div>
-                <div class="sec1-text-animbox show-on-scroll">
-                    <div class="sec1-text-animfadeup">
-                        <div class="homeheader-title">
-                            <div class="header-title">
-                                <h1 class="font-white"><?php the_field('header_title_1') ?></h1>
-                                <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+
+                <!-- Section 2 -->
+                <div class="col-lg-12 item of-lg-h sec-2">
+                    <div class="sec2-image-animbox show-on-scroll">
+                        <div class="sec2-image-animfadeup">
+                            <div class="homeheader-box">
+                                <img class="image" src="<?php the_field('head_img_2') ?>"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec2-text-animbox show-on-scroll">
+                        <div class="sec2-text-animfadeup">
+                            <div class="homeheader-title">
+                                <div class="header-title">
+                                    <h1 class="font-white"><?php the_field('head_title_2') ?></h1>
+                                    <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                    <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="homemotif-1"><img id="homemotif" class="homeheader-motif-01 move-left d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/motif.png"/></div>
-                <div id="homemotif-2"><img class="homeheader-motif-02 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/motif-02.png"/></div>
-                <div id="homemotif-3"><img id="homemotif" class="homeheader-motif-03 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/home-slider/motif.png"/></div>
-            </div>
 
-            <!-- Section 2 -->
-            <div class="col-lg-12 item of-lg-h sec-2">
-                <div class="sec2-image-animbox show-on-scroll">
-                    <div class="sec2-image-animfadeup">
-                        <div class="homeheader-box">
-                            <img class="image" src="<?php the_field('head_img_2') ?>"/>
+                <!-- Section 3 -->
+                <div class="col-lg-12 item of-lg-h sec-3">
+                    <div class="sec3-image-animbox show-on-scroll">
+                        <div class="sec3-image-animfadeup">
+                            <div class="homeheader-box">
+                                <img class="image" src="<?php the_field('head_img_3') ?>"/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="sec2-text-animbox show-on-scroll">
-                    <div class="sec2-text-animfadeup">
-                        <div class="homeheader-title">
-                            <div class="header-title">
-                                <h1 class="font-white"><?php the_field('head_title_2') ?></h1>
-                                <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                    <div class="sec3-text-animbox show-on-scroll">
+                        <div class="sec3-text-animfadeup">
+                            <div class="homeheader-title">
+                                <div class="header-title">
+                                    <h1 class="font-white"><?php the_field('head_title_3') ?></h1>
+                                    <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
+                                    <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Section 3 -->
-            <div class="col-lg-12 item of-lg-h sec-3">
-                <div class="sec3-image-animbox show-on-scroll">
-                    <div class="sec3-image-animfadeup">
-                        <div class="homeheader-box">
-                            <img class="image" src="<?php the_field('head_img_3') ?>"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="sec3-text-animbox show-on-scroll">
-                    <div class="sec3-text-animfadeup">
-                        <div class="homeheader-title">
-                            <div class="header-title">
-                                <h1 class="font-white"><?php the_field('head_title_3') ?></h1>
-                                <img class="homeheader-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon.png"/>
-                                <img class="homeheader-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-02.png"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
         </div>
     </div>
 

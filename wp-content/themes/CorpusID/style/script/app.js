@@ -504,7 +504,7 @@ $(document).ready(function(){
 
       $('#homemotif-1').fadeOut();
       $('#homemotif-2').fadeOut();
-      $('#homemotif-3').fadeOut();
+      // $('#homemotif-3').fadeOut();
       $('.nav-corpus').addClass('solid');
     } else {
 
@@ -513,9 +513,9 @@ $(document).ready(function(){
       // $('#navbarcorpus').addClass('shownav');
       $('.nav-corpus').removeClass('solid');
 
-      $('#homemotif-1').fadeIn();
-      $('#homemotif-2').fadeIn();
-      $('#homemotif-3').fadeIn();
+      // $('#homemotif-1').fadeIn();
+      // $('#homemotif-2').fadeIn();
+      // $('#homemotif-3').fadeIn();
     }
   });
 });
