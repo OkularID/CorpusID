@@ -33,14 +33,23 @@
         #navbarcorpus{position: fixed;}
         .shownnav{display: block !important;}
         .hiddennav{display: none !important;}
+        .nav-corpus .wa, .nav-corpus2 .wa{
+            position: absolute;
+            margin-top: 0px;
+            padding: 17px 20px !important;
+            color: #fff;
+            border: 1px solid #fff;
+        }
         .nav-corpus2 {
             z-index: 1100;
             padding: 17px 29px;
             width: 100%;
+            transition: .2s;
         }
         .nav-corpus2.solid{
             background-color: rgba(0, 0, 0, 0.85);
-            padding: 5px 29px;
+            padding: 17px 29px;
+            transition: 3s;
         }
         .nav-corpus2.solid.col-lg-7 {
             padding-top: -7px !important;
@@ -51,6 +60,24 @@
         .nav-corpus2.solid .page ul li ul li {
             padding: 1px 2px !important;
             margin: 10px !important;
+        }
+        .nav-corpus .wa {
+            padding: 15px 15px;
+        }
+        .page ul li {
+            position: relative;
+            display: inline;
+            padding: 20px 20px 55px;
+        }
+        .page ul li ul {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: -4px auto 0;
+            top: 69px;
+            left: -31px;
+            right: -25px;
+            text-align: center;
         }
 
 
@@ -97,7 +124,9 @@
             </div>
             <div class="col-lg-2">
                 <div class="wa">
-                    <img src="<?php bloginfo('stylesheet_directory');?>/images/logo-whatsapp.png"><a class="font-white" href="https://api.whatsapp.com/send?phone=<?php the_field('whatsapp_phone',530) ?>" target="_blank"><?php the_field('whatsapp_title',530) ?></a>
+                    <div class="text-center">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/images/logo-whatsapp.png"><a class="font-white" href="https://api.whatsapp.com/send?phone=<?php the_field('whatsapp_phone',530) ?>" target="_blank"><?php the_field('whatsapp_title',530) ?></a>
+                    </div>
                 </div>
             </div>
         </div>

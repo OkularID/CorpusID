@@ -33,26 +33,57 @@
         #navbarcorpus{position: fixed;}
         .shownnav{display: block !important;}
         .hiddennav{display: none !important;}
+        .nav-corpus .wa, .nav-corpus2 .wa{
+            position: absolute;
+            margin-top: 0px;
+            padding: 17px 20px !important;
+            color: #fff;
+            border: 1px solid #fff;
+        }
         .nav-corpus {
             z-index: 1100;
             padding: 17px 29px;
             width: 100%;
+            transition: .2s;
         }
         .nav-corpus.solid{
             background-color: rgba(0, 0, 0, 0.85);
-            padding: 5px 29px;
+            padding: 17px 29px;
+            transition: 3s;
         }
         .nav-corpus.solid.col-lg-7 {
             padding-top: -7px !important;
         }
         .nav-corpus.solid .page ul li ul {
             background-color: rgba(0, 0, 0, 0.50);
+
         }
         .nav-corpus.solid .page ul li ul li {
             padding: 1px 2px !important;
             margin: 10px !important;
         }
+        .nav-corpus .wa {
+            padding: 15px 15px;
+        }
+        /*.chat_me {*/
+        /*    padding: 15px 15px;*/
+        /*}*/
+        .page ul li {
+            position: relative;
+            display: inline;
+            padding: 20px 20px 55px;
+        }
 
+        .page ul li ul {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin: -4px auto 0;
+            top: 69px;
+            left: -31px;
+            right: -25px;
+            text-align: center;
+        }
 
         .loadergif{
             transition: all .3s;

@@ -160,9 +160,17 @@
                     <img class="contact-motif-01 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/contact/motif.png"/>
                 </div>
                 <div class="col-lg-6 mb-lg-10p contactform pl-lg-5p pr-lg-10p">
-
+                    <style>
+                        .text_area_message {
+                            height: 169px !important;
+                        }
+                        .button_contact_submit {
+                            color: white;
+                            background-color: #2a9bd9;
+                            width: 27% !important;
+                        }
+                    </style>
                     <?php echo do_shortcode('[contact-form-7 id="725" title="Form Contact"]'); ?>
-
 <!--                    <form action="">-->
 <!--                        <label>Name</label>-->
 <!--                        <input class="mb-lg-10" type="text">-->
@@ -277,6 +285,15 @@
                     font-size: 35px !important;
                     color: #fff !important;
                 }
+                /*Contact form mobile*/
+                .text_area_message {
+                    height: 169px !important;
+                }
+                .button_contact_submit {
+                    color: white;
+                    background-color: #2a9bd9;
+                    width: 27% !important;
+                }
             }
         </style>
         <div class="container-fluid pt-m-10p pb-m-10p">
@@ -299,22 +316,25 @@
                 </div>
                 <div class="col-12 mb-lg-10p contactform pl-lg-5p pr-lg-5p">
                     <p>Please fill out the form, and we’ll respond to you shortly.</p>
-                    <form action="">
-                        <label>Name</label>
-                        <input class="mb-lg-10" type="text">
-                        <label>Email</label>
-                        <input class="mb-lg-10" type="email">
-                        <label>Phone</label>
-                        <input class="mb-lg-10" type="number">
-                        <label>Company</label>
-                        <input class="mb-lg-10" type="text">
-                        <label>Message</label>
-                        <textarea class="mb-lg-10" rows="5"></textarea>
-                        <button type="button" class="button-gr">
-                            <p class="font-white">SUBMIT</p>
-                            <img class="w-lg-100 h-lg-35" src="<?php bloginfo('stylesheet_directory');?>/images/button-gr.png">
-                        </button>
-                    </form>
+
+                    <?php echo do_shortcode('[contact-form-7 id="725" title="Form Contact"]'); ?>
+
+                    <!--                    <form action="">-->
+<!--                        <label>Name</label>-->
+<!--                        <input class="mb-lg-10" type="text">-->
+<!--                        <label>Email</label>-->
+<!--                        <input class="mb-lg-10" type="email">-->
+<!--                        <label>Phone</label>-->
+<!--                        <input class="mb-lg-10" type="number">-->
+<!--                        <label>Company</label>-->
+<!--                        <input class="mb-lg-10" type="text">-->
+<!--                        <label>Message</label>-->
+<!--                        <textarea class="mb-lg-10" rows="5"></textarea>-->
+<!--                        <button type="button" class="button-gr">-->
+<!--                            <p class="font-white">SUBMIT</p>-->
+<!--                            <img class="w-lg-100 h-lg-35" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/button-gr.png">-->
+<!--                        </button>-->
+<!--                    </form>-->
                 </div>
 
                 <!-- Maps -->

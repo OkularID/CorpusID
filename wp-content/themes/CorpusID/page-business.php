@@ -158,55 +158,175 @@
 </section>
 
 <section class="serviceSection">
-    <style>
-        .service-motif1{
-            z-index: 1030;
-            position: absolute;
-            top: -12% !important;
-            left: 14% !important;
-            width: auto !important;
-        }
-        .service-motif2{
-            z-index: 10;
-            position: absolute;
-            top: 37%;
-            left: 52% !important;
-            width: auto;
-        }
-        .service-motif3{
-            z-index: 1030 !important;
-            position: absolute;
-            top: -6%;
-            left: 40% !important;
-            width: auto;
-        }
-    </style>
-    <div class="container-fluid pt-lg-10p pb-lg-10p bg-black font-white">
-        <div class="row">
-            <div class="col-lg-6 pl-lg-10p pb-lg-5p">
-                <h2><?php the_field('section_3_title') ?></h2>
-                <!--Motif-->
-                <img class="service-motif1 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-02.png"/>
-                <img class="service-motif2 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-03.png"/>
+    <div class="d-none d-lg-block">
+        <style>
+            .service-motif1{
+                z-index: 1030;
+                position: absolute;
+                top: -12% !important;
+                left: 14% !important;
+                width: auto !important;
+            }
+            .service-motif2{
+                z-index: 10;
+                position: absolute;
+                top: 37%;
+                left: 52% !important;
+                width: auto;
+            }
+            .img_solution {
+                width: 200% !important;
+                height: auto !important;
+            }
+            .owl-carousel .owl-stage-outer {
+                overflow: unset;
+            }
+            .owl-carousel .owl-item img {
+                width: 70%;
+            }
+            .service-motif3{
+                z-index: 1030 !important;
+                position: absolute;
+                top: -6%;
+                left: 62% !important;
+                width: auto;
+            }
+            .owl-prev img {
+                width: 48px;
+            }
+            .owl-next img {
+                width: 48px;
+            }
+            .solution_slider.owl-theme .owl-nav{
+                position: absolute;
+                top: -19%;
+                right: 15%;
+            }
+            .solution_slider.owl-theme .owl-nav button.owl-prev{
+                left: -74px;
+            }
+            .solution_slider.owl-theme .owl-nav button.owl-next{
+                right: -31px;
+            }
+            .owl-theme .owl-dots .owl-dot {
+                display: none;
+            }
+        </style>
+        <div class="container-fluid pt-lg-10p bg-black font-white">
+            <div class="row">
+                <div class="col-lg-6 pl-lg-10p pb-lg-5p">
+                    <h2><?php the_field('section_3_title') ?></h2>
+                    <!--Motif-->
+                    <img class="service-motif1 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-02.png"/>
+                    <img class="service-motif2 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-03.png"/>
+                </div>
+                <div class="col-lg-6"></div>
+                <div class="col-lg-12 pl-lg-5p">
+                    <div class="container-fluid" style="overflow: unset !important;">
+                        <div class="row">
+                            <div class="solution_slider owl-theme">
+                                <?php if(have_rows('repeater_section_3')): ?>
+                                    <?php while (have_rows('repeater_section_3')): the_row(); ?>
+                                        <div class="item">
+                                            <div class="col-lg-6 pb-lg-15p pl-lg-5p pr-lg-5p">
+                                                <img src="<?php the_sub_field('image');?>" alt="" class="img_solution">
+                                                <img class="service-motif3 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/partial-04.png"/>
+                                                <div class="positionService">
+                                                    <h3><span><?php the_sub_field('big_num');?></span> <?php the_sub_field('num');?></h3>
+                                                </div>
+                                                <p><?php the_sub_field('sub');?></p>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <!--Slider-->
-            </div>
-            <div class="col-lg-12 pl-lg-5p pr-lg-5p">
-                <div class="container-fluid" style="overflow: unset !important;">
-                    <div class="row">
-                        <?php if(have_rows('repeater_section_3')): ?>
-                            <?php while (have_rows('repeater_section_3')): the_row(); ?>
-                                <div class="col-lg-6 pl-lg-5p pr-lg-5p">
-                                    <img src="<?php the_sub_field('image');?>" alt="" class="img-fluid w-lg-100p">
-                                    <img class="service-motif3 move-right d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/partial-04.png"/>
-                                    <div class="positionService">
-                                        <h3><span><?php the_sub_field('big_num');?></span> <?php the_sub_field('num');?></h3>
-                                    </div>
-                                    <p><?php the_sub_field('sub');?></p>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+        </div>
+    </div>
+
+    <!--Mobile-->
+    <div class="d-block d-lg-none">
+        <style>
+            @media screen and (max-width: 846px) {
+                .service-motif1{
+                    z-index: 1030;
+                    position: absolute;
+                    top: -12% !important;
+                    left: 14% !important;
+                    width: auto !important;
+                }
+                .service-motif2{
+                    z-index: 10;
+                    position: absolute;
+                    top: 37%;
+                    left: 52% !important;
+                    width: auto;
+                }
+                .img_solution {
+                    width: 100% !important;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: auto !important;
+                }
+                .owl-carousel .owl-stage-outer {
+                    overflow: unset;
+                }
+                .owl-carousel .owl-item img {
+                    width: 70%;
+                }
+                .owl-prev img {
+                    width: 48px;
+                }
+                .owl-next img {
+                    width: 48px;
+                }
+                .solution_slider.owl-theme .owl-nav{
+                    position: absolute;
+                    top: -240%;
+                    right: 15%;
+                }
+                .solution_slider.owl-theme .owl-nav button.owl-prev{
+                    left: -74px;
+                }
+                .solution_slider.owl-theme .owl-nav button.owl-next{
+                    right: -31px;
+                }
+                .owl-theme .owl-dots .owl-dot {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="container-fluid pt-m-10p pb-m-10p bg-black font-white">
+            <div class="row">
+                <div class="col-12 pl-m-10p pb-m-5p">
+                    <h2><?php the_field('section_3_title') ?></h2>
+                    <!--Motif-->
+                    <img class="service-motif1 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-02.png"/>
+                    <img class="service-motif2 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-03.png"/>
+                </div>
+                <div class="col-12"></div>
+                <div class="col-12">
+                    <div class="container-fluid" style="overflow: unset !important;">
+                        <div class="row">
+                            <div class="solution_slider owl-theme">
+                                <?php if(have_rows('repeater_section_3')): ?>
+                                    <?php while (have_rows('repeater_section_3')): the_row(); ?>
+                                        <div class="item pl-m-5 pr-m-5">
+                                            <img src="<?php the_sub_field('image');?>" alt="" class="img_solution">
+                                            <!--                                                <img class="service-motif3 move-right d-block d-lg-none" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/investment/partials/partial-04.png"/>-->
+                                            <div class="positionService pl-m-30">
+                                                <h3><span><?php the_sub_field('big_num');?></span> <?php the_sub_field('num');?></h3>
+                                                <p><?php the_sub_field('sub');?></p>
+                                            </div>
+
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -229,7 +349,7 @@
                 width: auto;
             }
         </style>
-        <div class="container-fluid">
+        <div class="container-fluid pt-m-10p">
             <div class="row">
                 <div class="col-lg-12 p-0">
                     <div class="boxv font-white">
@@ -261,6 +381,9 @@
                 .bottom_content_mobile {
                     overflow: hidden;height: 60px;
                 }
+                .m_img {
+                    height: 144px;
+                }
             }
         </style>
         <div class="container-fluid">
@@ -271,14 +394,15 @@
                         <br>
                         <p class="bottom_content_text bottom_content_mobile"><?php the_field('bottom_content') ?></p>
                     </div>
-                    <img class="img-fluid d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/bottom-02.jpg"/>
-                    <img class="img-fluid d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/investment/bottom-02.jpg"/>
+                    <!--                    <img class="img-fluid d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/investment/bottom-02.jpg"/>-->
+                    <img class="img-fluid m_img d-lg-none" src="<?php bloginfo('stylesheet_directory');?>/images/investment/bottom-02.jpg"/>
                     <!--                    <img class="service-motif4 d-none d-lg-block" src="--><?php //bloginfo('stylesheet_directory');?><!--/images/investment/partials/block-01.png"/>-->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 <?php endwhile; ?>

@@ -35,6 +35,38 @@ $(document).ready(function() {
 // ============Carousel===============
 $(document).ready(function() {
 
+  // Solution carousel
+  $('.solution_slider').addClass('owl-carousel owl-theme').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    loop: 1,
+    autoplay: true,
+    navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
+    responsive:{
+      /*Mobile*/
+      0: {
+        items: 1,
+        dots: false,
+        autoplay: false,
+        nav: true
+      },
+      /*Tab*/
+      600: {
+        items: 2,
+        dots: true,
+        nav: true
+      },
+      /*Desktop*/
+      1000: {
+        items: 2,
+        loop: 1,
+        autoplay: 0,
+        dots: true,
+        nav: true
+      }
+    }
+  })
+
   // About Carousel
   $('.about-slider-carousel').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 0,
@@ -487,3 +519,4 @@ $(document).ready(function(){
     }
   });
 });
+
