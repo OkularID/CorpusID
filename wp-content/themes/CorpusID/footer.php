@@ -8,7 +8,7 @@
                     <ul class="boxc">
                         <?php if(have_rows('footer_menu',530)): ?>
                             <?php while (have_rows('footer_menu',530)): the_row(); ?>
-                                <li><a href="<?php the_sub_field('link');?>"><?php the_sub_field('title');?></a></li>
+                                <li><a href="<?php the_sub_field('url_footer');?>"><?php the_sub_field('title');?></a></li>
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </ul>

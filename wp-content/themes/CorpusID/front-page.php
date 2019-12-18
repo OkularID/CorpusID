@@ -777,8 +777,6 @@
                                     <img class="placeholder_kapan" src="<?php the_field('placeholder_section_4');?>" alt="">
                                 <div class="right-side">
 
-
-
                                     <?php if(have_rows('repeater_section_4')): ?>
                                         <?php while (have_rows('repeater_section_4')): the_row(); ?>
                                     <img src="<?php the_sub_field('img_repeater_4');?>" class="kapan">

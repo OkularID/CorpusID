@@ -350,12 +350,13 @@
             }
             .milestone .owl-theme .owl-nav button.owl-prev{
                 margin: 0;
-                position: unset;
-                top: unset;
+                position: absolute;
+                top: 49px;
                 left: unset;
                 transform: unset;
                 font-size: 12px !important;
-                color: #fff !important;
+                color:
+                #fff !important;
             }
             .milestone .owl-theme .owl-nav button.owl-prev img{width: 75%}
             .milestone .owl-theme .owl-nav button.owl-next{
@@ -465,7 +466,7 @@
                 background: #0093be;
             }
             .milestoneMobile .boxMobile{
-                padding: 20% 10%;
+                padding: 20% 10% 15%;
                 width: 100%;
                 background:url("<?php bloginfo('stylesheet_directory');?>/images/about/partials/about-background-04.png");
                 background-size: 100% 100% !important;
@@ -475,7 +476,7 @@
             }
             .milestoneMobile .boxMobile p{line-height: 20px;}
             .milestoneMobile .boxMobile .title{
-                width: 100%;
+                width: 70%;
                 height: 45px;
                 overflow: hidden;
             }
@@ -514,12 +515,12 @@
                 width: auto;
             }
             .milestone .owl-theme .owl-nav button.owl-prev{
+		margin-top:-10px;
                 font-size: 0 !important;
                 color: #fff !important;
             }
             .milestone .owl-theme .owl-nav button.owl-prev img{width: 60%;}
             .milestone .owl-theme .owl-nav button.owl-next{
-                margin-left: -25px;
                 font-size: 0 !important;
                 color: #fff !important;
             }
@@ -705,9 +706,9 @@
             .thumbnail-card{
                 overflow: hidden;
                 position: relative;
-                background-size: cover !important;
+                background-size: 100% 100% !important;
                 background-repeat: no-repeat !important;
-                background-position: center !important;
+                background-position: top center !important;
             }
             .thumbnail-card .box{width: 100%;height: 66vh;}
             .thumbnail-card .title{
@@ -752,22 +753,30 @@
                         <img class="temptitle-motif1 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/partials/right.png"/>
                         <img class="temptitle-motif2 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/partials/left.png"/>
                     </div>                </div>
-                <?php if(have_rows('repeater_section_6')): ?>
-                    <?php while (have_rows('repeater_section_6')): the_row(); ?>
-                        <!--People-->
-                        <div class="col-lg-4 pt-lg-2p">
-                            <div class="thumbnail-card" style="width: 85%; height: 85%;  background: url('<?php the_sub_field('image_section_6');?>');">
-                                <div class="box"></div>
-                                <div class="content">
-                                    <div class="text">
-                                        <h3 class="font-white"><?php the_sub_field('team_name');?></h3>
-                                        <p class="font-white"><?php the_sub_field('team_positions');?></p>
+                <div class="col-lg-12 pl-lg-10p pr-lg-10p">
+                    <div class="container-fluid">
+                        <div class="row">
+                    
+                        <?php if(have_rows('repeater_section_6')): ?>
+                            <?php while (have_rows('repeater_section_6')): the_row(); ?>
+                                <!--People-->
+                                <div class="col-lg-4 pb-lg-30">
+                                    <div class="thumbnail-card" style="width: 100%; height: 50vh;  background: url('<?php the_sub_field('image_section_6');?>');">
+                                        <div class="box"></div>
+                                        <div class="content">
+                                            <div class="text">
+                                                <h3 class="font-white"><?php the_sub_field('team_name');?></h3>
+                                                <p class="font-white"><?php the_sub_field('team_positions');?></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        
                         </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -789,9 +798,9 @@
             .thumbnail-card{
                 overflow: hidden;
                 position: relative;
-                background-size: cover !important;
+                background-size: 100% 100% !important;
                 background-repeat: no-repeat !important;
-                background-position: center !important;
+                background-position: top center !important;
             }
             .thumbnail-card .box{width: 100%;height: 66vh;}
             .thumbnail-card .title{
@@ -1103,7 +1112,7 @@
                         }
                     </style>
 		    <div class="boxv r-lg-20p">
-		      <a href="<?php echo get_permalink(); ?>">
+		      <a href="<?php the_field('bottom_link') ?>">
                           <div class="newbutton-gr" style="background: url('<?php bloginfo('stylesheet_directory');?>/images/button-gr.png');">
                               <p class="font-white"><?php the_field('button_button') ?></p>
                           </div>

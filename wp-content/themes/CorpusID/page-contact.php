@@ -80,7 +80,7 @@
 	.mapbrief{
 	  overflow:hidden;
 	  width:100%;
-	  height:35vh;
+	  height:40vh;
 	}
     </style>
 
@@ -181,6 +181,7 @@
                             background-color: #2a9bd9;
                             width: 27% !important;
                         }
+			.mapSection .header-title{width:100%;}
                     </style>
                     <?php echo do_shortcode('[contact-form-7 id="725" title="Form Contact"]'); ?>
 <!--                    <form action="">-->
@@ -279,7 +280,7 @@
                 }
 		.mapSection iframe{height:50vh !important;}
                 .header_title_address {
-                    height: 65vh !important;
+                    height: 60vh !important;
                     overflow: hidden;
                 }
 		.mapSection .contact-carousel.owl-theme .owl-nav{

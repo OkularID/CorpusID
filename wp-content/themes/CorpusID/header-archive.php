@@ -12,7 +12,7 @@
     <!--===========================-->
 
     <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="<?php bloginfo('stylesheet_directory');?>/images/favicon.png">
     <title><?php bloginfo('title');?> | Newsroom</title>
     <link href="<?php bloginfo('stylesheet_directory');?>/style/css/style.css" rel='stylesheet' type='text/css'>
     <link href="<?php bloginfo('stylesheet_directory');?>/style/css/animation.css" rel='stylesheet' type='text/css'>

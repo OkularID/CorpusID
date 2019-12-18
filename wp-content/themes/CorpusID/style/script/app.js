@@ -32,7 +32,7 @@ $(document).ready(function() {
 });
 
 
-// Fucking service homepage
+// Service homepage
 
 
 $(".left-side ul li").hover(function(){
@@ -81,7 +81,7 @@ $(document).ready(function() {
     responsive:{
       /*Mobile*/
       0: {
-        items: 1, 
+        items: 1,
         dots: false,
         autoplay: true,
         nav: true
@@ -115,6 +115,8 @@ $(document).ready(function() {
       0: {
         items: 1,
         dots: true,
+        loop: true,
+        autoplay: true,
         nav: true
       },
       /*Tab*/
@@ -140,6 +142,8 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
+        loop: true,
+        autoplay: true,
         dots: true,
         nav: true
       },
@@ -163,6 +167,8 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
+	loop: true,
+	autoplay: true,
         dots: true,
  	navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-07.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-06.png'>"],
         nav: true
@@ -236,6 +242,7 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
+        navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-07.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-06.png'>"],
         dots: true,
         nav: true
       },
@@ -246,7 +253,7 @@ $(document).ready(function() {
       },
       1000: {
         items: 1,
-        navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-left-box.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/homepage/arrow-right-box.png'>"],
+        navText: ["<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-07.png'>","<img src='https://corpus.co.id/staging/wp-content/themes/CorpusID/images/about/partials/arrow-06.png'>"],
         loop: false,
         autoplay: false,
         dots: true,
