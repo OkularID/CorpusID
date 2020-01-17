@@ -73,7 +73,7 @@
 <!--Desktop-->
     <div class="d-none d-lg-block">
         <style>
-            .investment-image {position: absolute; z-index: 1030;  width: 70%; height: auto;}
+            .investment-image {position: absolute; z-index: 1030;  width: 70%; height: 60vh;}
             .investment-motif1{
                 z-index: 1030;
                 position: absolute;

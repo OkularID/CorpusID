@@ -128,7 +128,7 @@
                 .header-title1 {
                     font-size: 18px !important;
                 }
-                .investment-image {position: relative; z-index: 1030;  width: 70%; height: auto;}
+                .investment-image {position: relative; z-index: 1030;  width: 70%; height: 60vh;}
                 .content-title {
                     font-size: 22px !important;
                 }
