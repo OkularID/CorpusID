@@ -98,7 +98,7 @@
                 padding-left: 49%;
             }
         </style>
-        <div class="container-fluid pt-lg-5p pb-lg-10p">
+        <div class="container-fluid pt-lg-5p pb-lg-15p">
             <div class="row">
                 <div class="col-lg-12 pb-lg-5p pl-lg-15p pr-lg-15p text-center">
                     <h3><?php the_field('title_section_2') ?></h3>
@@ -292,7 +292,7 @@
                         height: auto !important;
                     }
                     .owl-carousel .owl-stage-outer {
-                        overflow: unset;
+                        overflow: hidden;
                     }
                     .owl-carousel .owl-item img {
                         width: 70%;
@@ -327,7 +327,7 @@
             </style>
             <div class="container-fluid pt-m-10p pb-m-10p bg-black font-white">
                 <div class="row">
-                    <div class="col-12 pl-m-10p pb-m-5p">
+                    <div class="col-12 pl-m-10p pb-m-0">
                         <div id="temptitle-color">
                             <h2 style="color: #fff !important;"><?php the_field('section_3_title') ?></h2>   
                             <img class="temptitle-motif1" src="<?php bloginfo('stylesheet_directory');?>/images/partials/left-white.png"/>
@@ -337,18 +337,13 @@
                         <img class="service-motif1 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-02.png"/>
                         <img class="service-motif2 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/investment/partials/block-03.png"/>
                     </div>
-                    <div class="col-12"></div>
-                    <div class="col-m-12 px-lg-0">
+                    <div class="col-12 pl-m-10p pr-m-10p">
                         <div class="solution_slider owl-theme">
                             <?php if(have_rows('repeater_section_3')): ?>
                                 <?php while (have_rows('repeater_section_3')): the_row(); ?>
                                     <div class="item">
-                                        <div class="positionService m-m-0 px-m-10">
-                                            <h3><span style="color: #009DAF;"><?php the_sub_field('big_num');?></span> <?php the_sub_field('num');?></h3>
-                                        </div>
-                                        <div class="_sub">
-                                            <?php the_sub_field('sub');?>
-                                        </div>
+                                        <h3><span style="font-size:50px;color: #009DAF;"><?php the_sub_field('big_num');?></span> <?php the_sub_field('num');?></h3>
+                                        <?php the_sub_field('sub');?>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>

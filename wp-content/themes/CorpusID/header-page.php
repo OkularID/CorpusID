@@ -120,7 +120,7 @@
             </div>
             <div class="col-lg-1 pl-lg-0">
                 <div class="lang">
-                <a class="font-white mr-lg-10" href="/staging/en">EN</a><span class="mr-lg-10">|</span><a class="font-white" href="/staging/id">ID</a>
+                <a class="font-white mr-lg-10" href="/en">EN</a><span class="mr-lg-10">|</span><a class="font-white" href="/id">ID</a>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -303,7 +303,7 @@
             )); ?>
         </div>
         <div class="trans_mobile">
-            <a class="mr-lg-10" href="/staging/en">EN</a><span class="mr-lg-10">|</span><a class="" href="/staging/id">ID</a>
+            <a class="mr-lg-10" href="/en">EN</a><span class="mr-lg-10">|</span><a class="" href="/id">ID</a>
         </div>
     </div>
 </section>

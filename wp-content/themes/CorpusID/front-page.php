@@ -762,7 +762,7 @@
                                         <ul>
                                             <?php if(have_rows('repeater_section_4')): ?>
                                                 <?php while (have_rows('repeater_section_4')): the_row(); ?>
-                                                    <li class="font-white lft"><a href="<?php the_sub_field('link_text');?>"></a><?php the_sub_field('text_title');?> </li>
+                                                    <li class="font-white lft"><a href="<?php the_sub_field('link_text');?>"><?php the_sub_field('text_title');?></a></li>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
                                         </ul>
@@ -776,6 +776,8 @@
                             <div class="col-lg-7 pos-rel">
                                     <img class="placeholder_kapan" src="<?php the_field('placeholder_section_4');?>" alt="">
                                 <div class="right-side">
+
+
 
                                     <?php if(have_rows('repeater_section_4')): ?>
                                         <?php while (have_rows('repeater_section_4')): the_row(); ?>
@@ -829,6 +831,10 @@
                 .home-services ul li {
                     padding: 6px 0;
                 }
+                .home-services ul li a{
+		    line-height: 22px !important;
+		    font-size: 13px !important;
+		}
                 .home-services .button-gr btn-btn {
                     height: 31px !important;
                     width: 148px !important;
@@ -846,11 +852,11 @@
                         <div class="row">
                             <div class="col-12 slideanim">
                                 <div class="boxcs text-center">
-                                    <a href="<?php the_field('play_link') ?>"><img class="w-m-13p" src="<?php the_field('play_icon') ?>"/></a>
+                                    <a href="<?php the_field('play_link') ?>" target="_blank"><img class="w-m-13p" src="<?php the_field('play_icon') ?>"/></a>
                                     <div class="header-title mb-m-5p">
                                         <h1 class="font-white"><?php the_field('video_title') ?></h1>
                                     </div>
-                                    <a href="<?php the_field('button_link') ?>">
+                                    <a href="<?php the_field('button_link') ?>" target="_blank">
                                         <div class="newbutton-gr" style="background: url('<?php bloginfo('stylesheet_directory');?>/images/button-gr.png');">
                                             <p class="font-white"><?php the_field('play_button') ?></p>
                                         </div>
@@ -1079,6 +1085,67 @@
             </div>
         </div>
     </div>
+
+<!-- Mobile Update Section-->
+    <div class="d-block d-lg-none">
+        <!-- Home Updates -->
+        <div class="container-fluid home-updates pt-lg-10p pb-lg-10p slideanim">
+            <div class="row">
+                <div class="col-lg-12 mb-lg-5p pl-lg-10p pr-lg-10p">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="updates-title mb-lg-3p">
+                                    <h2><?php the_field('title_section_6');?></h2>
+                                    <img class="home-icon-01 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-11.png"/>
+                                    <img class="home-icon-02 d-none d-lg-block" src="<?php bloginfo('stylesheet_directory');?>/images/homepage/home-icon-12.png"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <a class="button-gr" href="<?php the_field('button_link_section_6');?>">
+                                    <p class="font-white"><?php the_field('button_section_6');?></p>
+                                    <img class="w-lg-300 h-lg-50" src="<?php bloginfo('stylesheet_directory');?>/images/button-gr.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 pl-lg-10p pr-lg-10p">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="home-carousel3 owl-theme">
+                                <?php
+                                $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                                $params = array('post_type' => 'newsroom' , 'order' => 'DESC', 'post_status' => 'publish', 'posts_per_page' => -1, 'paged' => $paged);
+                                $ne = new WP_Query($params);
+                                if($ne->have_posts()){
+                                    while ($ne->have_posts()) : $ne->the_post();
+                                        ?>
+                                        <div class="item">
+                                            <div class="w-lg-100p box-shadow">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-5 pl-lg-0 pr-lg-0">
+                                                            <div class="homenews-image" style="background: url('<?php the_field('homepage_image_potrait') ?>');"></div>
+                                                        </div>
+                                                        <div class="col-lg-7 pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p">
+                                                            <h5><b><?php the_field('date'); ?></b></h5>
+                                                            <h5 class="homenews-title"><b><?php echo wp_trim_words( get_the_title(), 5, ' ...' ); ?></b></h5>
+                                                            <p class="homenews-brief"><?php echo wp_trim_words( get_field('detail'), 20, ' ...' ); ?> <a href="<?php echo get_permalink(); ?>">read more</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php  endwhile;} ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <section class="contactSection">
